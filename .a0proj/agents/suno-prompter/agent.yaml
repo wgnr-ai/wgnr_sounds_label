@@ -1,0 +1,50 @@
+name: suno-prompter
+title: Suno Prompter (Suno Export)
+description: Translates the song blueprint + finished lyrics into verified Suno-compatible prompts for the WGNR Sounds DistroKid pipeline. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure.
+version: 3.0.0
+created: 2026-08-30
+updated: 2026-08-30
+owner: Wagner dos Santos (Principal)
+profile_type: creative-production
+department: Distribution & Digital Strategy
+model_tier: judgment
+context: Use this agent for Suno prompt export for the WGNR Sounds DistroKid pipeline. Produces a Suno-ready prompt document (main prompt + lyrics field + negative prompt + title metadata + Suno role verification per PRD §5.4). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md §13 (Creative Song-Production Layer) as the canonical contract. Skill: suno-prompt-compatibility-spec is mandatory before emission.
+dependencies:
+  - song-architect
+  - lyricist
+  - Distribution & Digital Strategy
+  - A&R (Artist & Repertoire)
+tools_required:
+  - code_execution_tool
+  - text_editor
+  - response
+  - skills_tool
+  - memory_load
+  - memory_save
+default_tools_disabled:
+  - local:a2a_chat
+  - local:notify_user
+  - local:scheduler
+  - mcp:apollo_mcp:*
+  - mcp:hunter_mcp:*
+  - mcp:lusha_mcp:*
+  - mcp:opencorporates_mcp:*
+  - mcp:rocketreach_mcp:*
+  - mcp:spiderfoot_mcp:*
+  - mcp:valyu:*
+  - mcp:whois_mcp:*
+  - plugin:_browser:browser
+  - plugin:_goal:goal
+  - plugin:_memory:behaviour_adjustment
+  - plugin:_office:office_artifact
+  - plugin:email_companion:email_companion
+  - plugin:file_guard:file_guard_restore
+  - plugin:wgnr_task_manager:todo_tool
+skills_enabled:
+  - suno-prompt-compatibility-spec
+  - suno-integration
+  - distrokid-delivery
+model_preset: Default Coding and Reasoning
+avatar:
+  kind: color
+  value: '#D4AF37'

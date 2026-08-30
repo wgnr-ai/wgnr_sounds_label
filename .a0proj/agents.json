@@ -167,8 +167,55 @@
         "rosters-and-catalog-reconciliation"
       ],
       "path": ".a0proj/agents/wgnr-sounds-captain/"
+    },
+    {
+      "slug": "lyricist",
+      "title": "Lyricist (Song Lyrics)",
+      "description": "Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster (Wágner, Velvut, DJ Farra, Sobralenses) and ad-hoc creative work. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header (title, BPM, theme, target artist). Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
+      "model_tier": "judgment",
+      "profile_type": "creative-production",
+      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
+      "primary_role": "Song lyric writing for the WGNR Sounds roster. Produces finished song lyrics as a complete markdown deliverable.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-prompt-compatibility-spec"
+      ],
+      "path": ".a0proj/agents/lyricist/agent.yaml"
+    },
+    {
+      "slug": "song-architect",
+      "title": "Song Architect (Song Concept & Blueprint)",
+      "description": "Develops the song idea — concept, structure, arrangement notes, genre/mood/tempo blueprint — as a complete deliverable for WGNR Sounds. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint. Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
+      "model_tier": "judgment",
+      "profile_type": "creative-production",
+      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
+      "primary_role": "Song concept and blueprint development for the WGNR Sounds roster. Produces a structured markdown song blueprint.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-prompt-compatibility-spec"
+      ],
+      "path": ".a0proj/agents/song-architect/agent.yaml"
+    },
+    {
+      "slug": "suno-prompter",
+      "title": "Suno Prompter (Suno Export)",
+      "description": "Translates the song blueprint + finished lyrics into verified Suno-compatible prompts for the WGNR Sounds DistroKid pipeline. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure. Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
+      "model_tier": "judgment",
+      "profile_type": "creative-production",
+      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
+      "primary_role": "Suno prompt export for the WGNR Sounds DistroKid pipeline. Produces verified Suno-ready prompt documents.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-prompt-compatibility-spec",
+        "suno-integration",
+        "distrokid-delivery"
+      ],
+      "path": ".a0proj/agents/suno-prompter/agent.yaml"
     }
   ],
-  "version": "2.1.0",
-  "count": 11
+  "version": "3.0.0",
+  "count": 14
 }

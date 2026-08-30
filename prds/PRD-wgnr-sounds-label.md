@@ -1,17 +1,17 @@
-# PRD: WGNR Sounds Record Label — v2.1 (Captain + Foundation)
+# PRD: WGNR Sounds Record Label — v3.0 (Creative Song-Production Layer)
 
-> **Scope:** This PRD defines the v2.1 build of the WGNR Sounds Record Label project. v2.1 preserves all v1.2 foundation content (canonical department catalog, operating model, shared-until-dedicated brand-guide rule, roster & catalog, release lifecycle, DistroKid pipeline, ASCAP Music Publishing sub-entity) and adds the **project Captain** (`wgnr-sounds-captain`) — an orchestrator agent profile that auto-selects for new chats in this project via `.a0proj/default_agent.json`, delegates execution to the 10 label department agents, and activates the 5 label-specific skills per §7. v2.1 is the v2.0.0 follow-up that closes the Captain-pattern gap: every project in this framework should have a Captain orchestrator that owns project-specific workflow, and `wgnr_sounds_label` is the second project (after `wgnr_ai_sysop`) to formalize this. v2.1 does NOT scaffold the creative agents (lyricist / composer / music-video-producer) — those are v3.0.0 work.
+> **Scope:** This PRD defines the v3.0 build of the WGNR Sounds Record Label project. v3.0 preserves all v2.1 foundation content (10 canonical label departments, project Captain orchestrator, shared-until-dedicated brand-guide rule, roster & catalog, release lifecycle, DistroKid pipeline, ASCAP Music Publishing sub-entity) and adds the **Creative Song-Production Layer** (PRD §13): 3 new creative agents (`song-architect`, `lyricist`, `suno-prompter`) plus 1 canonical skill (`suno-prompt-compatibility-spec`). v3.0 is the v2.1.0 follow-up that closes the "song projects before going to Suno" workflow gap: Wagner can now accumulate finished creative artifacts (song blueprint + finished lyrics + verified Suno-compatible prompts) inside the wgnr_sounds_label project before exporting to suno.com. v3.0 does NOT scaffold `composer` or `music-video-producer` — those remain future work.
 >
-> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/`. (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **DistroKid is the sole distributor since 2023**. (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) **v2.1 NEW**: `wgnr-sounds-captain` agent profile at `.a0proj/agents/wgnr-sounds-captain/` mirrors `sysop-captain` (sysop is the canonical reference). (10) **v2.1 NEW**: `.a0proj/default_agent.json` (`{"agent": "wgnr-sounds-captain"}`) wires the Captain as the project auto-selected default per the canonical design at `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md`.
+> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/`. (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **DistroKid is the sole distributor since 2023**. (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) **v2.1**: `wgnr-sounds-captain` agent profile + `.a0proj/default_agent.json` Captain auto-selection. (10) **v3.0 NEW**: Creative Song-Production Layer (`song-architect` + `lyricist` + `suno-prompter` agents) + canonical `suno-prompt-compatibility-spec` skill. Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (verified Suno-ready prompts). Per-artist Suno role (PRD §5.4) drives prompt structure.
 >
-> **Must-not-compress lists:** Departments: 10 items (numbered §7.1–§7.10). Release-lifecycle phases: 7 stages. Suno role matrix: 4 artists × 4 columns (Artist / Suno role / Master source / Distribution flow). Open Questions: must be enumerated individually so each can be resolved independently. BEG sub-imprints: 4 (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks). Captain dependencies: 10 department agents + 5 skills. v1.2 §4 brand-identity subsections: 6.
+> **Must-not-compress lists:** Departments: 10 items (numbered §7.1–§7.10). Creative Production Layer: 3 agents (song-architect, lyricist, suno-prompter). Release-lifecycle phases: 7 stages. Suno role matrix: 4 artists × 4 columns (Artist / Suno role / Master source / Distribution flow). Open Questions: must be enumerated individually so each can be resolved independently. BEG sub-imprints: 4 (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks). Captain dependencies: 10 department agents + 5 skills. v1.2 §4 brand-identity subsections: 6. §13 Creative Song-Production Layer subsections: 13.1 workflow + 13.2 agents + 13.3 skill + 13.4 per-artist Suno role mapping.
 >
-> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is DistroKid named as the sole distributor with the year (2023)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/`? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)? (10) Is the v2.1 Captain (`wgnr-sounds-captain`) documented with the canonical reference path? (11) Is `.a0proj/default_agent.json` documented as the framework default-agent wiring mechanism?
+> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is DistroKid named as the sole distributor with the year (2023)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/`? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)? (10) Is the v2.1 Captain (`wgnr-sounds-captain`) documented with the canonical reference path? (11) Is `.a0proj/default_agent.json` documented as the framework default-agent wiring mechanism? (12) Are the 3 v3.0 creative agents (`song-architect`, `lyricist`, `suno-prompter`) documented with slug + title + model tier + output deliverable? (13) Is the `suno-prompt-compatibility-spec` skill referenced as the canonical Suno format reference (mandatory before suno-prompter emission)? (14) Is the §13 workflow (`song-architect` → `lyricist` → `suno-prompter`) documented? (15) Is the per-artist Suno role mapping (PRD §5.4) linked from §13?
 
-**Status:** Draft (v2.1)  
-**Version:** v2.1.0  
+**Status:** Draft (v3.0)  
+**Version:** v3.0.0  
 **Date:** 2026-08-30  
-**Supersedes:** v1.2.0 (commit `24facb3`)  
+**Supersedes:** v2.1.0 (commit `8fe4b68`)  
 **Author:** wgnr.ai Ops (Orchestrator)  
 **Owners:** Wagner dos Santos (Principal) / WGNR Sounds Label project (build + manage)  
 **Related:** `/a0/usr/projects/wgnr_ai_sysop/docs/projects-guide.md` (project structure), `/a0/usr/projects/wgnr_ai_sysop/prds/PRD-wgnr-task-manager.md` (PRD format reference), `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md` (Captain auto-selection design)
@@ -518,7 +518,65 @@ The Captain orchestrates the 10 canonical label departments per §7 — `ar`, `m
 
 Every project in this framework should have a Captain orchestrator that owns project-specific workflow. Without a Captain, new chats default to the global profile (`wgnr-ai-ops`) and lose label-specific context (multi-genre discipline, DistroKid pipeline, Suno role matrix, ASCAP Music Publishing). The Captain restores project-aware defaults without per-chat manual selection.
 
-## 13. Closeout checklist
+---
+
+## 13. Creative Song-Production Layer (v3.0.0)
+
+**Origin:** Wagner dos Santos directive, 2026-08-30: *"There will be many times when I would like to start the song projects here before going to Suno. That means finished lyrics, song idea, and prompts/instructions to give Suno that are verified Suno-compatible."*
+
+The **Creative Song-Production Layer** is a separate agent layer that operates upstream of the label's release pipeline (per PRD §7). It is NOT a label department; the 3 creative agents are scoped to the song-creation workflow that produces finished artifacts ready for the Suno export step.
+
+### 13.1 Workflow
+
+```
+song-architect  →  lyricist  →  suno-prompter
+(blueprint)        (lyrics)      (Suno-ready prompts)
+   ↓                  ↓                ↓
+   └──── user assembles finished artifacts ────┘
+                              ↓
+                       suno.com (paste)
+                              ↓
+                       DistroKid → DSPs (per §5.4 pipeline)
+```
+
+1. **song-architect** produces the song blueprint (concept, structure, arrangement, genre/mood/tempo, Suno role pre-check).
+2. **lyricist** produces finished song lyrics (metadata header + section-labeled body).
+3. **suno-prompter** consumes the blueprint + lyrics, runs the `suno-prompt-compatibility-spec` verification checklist, and emits a Suno-ready prompt set.
+4. The user assembles the 3 artifacts and pastes the Suno prompt set into suno.com.
+5. The output track (or ideation test) flows to DistroKid → DSPs per the per-artist Suno role (PRD §5.4).
+
+### 13.2 Agents
+
+| Slug | Title | Model tier | Output deliverable |
+|---|---|---|---|
+| `song-architect` | Song Architect (Song Concept & Blueprint) | judgment (`Default Coding and Reasoning`) | Song blueprint (markdown) |
+| `lyricist` | Lyricist (Song Lyrics) | judgment (`Default Coding and Reasoning`) | Finished song lyrics (markdown) |
+| `suno-prompter` | Suno Prompter (Suno Export) | judgment (`Default Coding and Reasoning`) | Suno-ready prompt set (markdown) |
+
+All 3 agents use `model_preset: "Default Coding and Reasoning"` (main model: `zai_coding/glm-5.1`, utility model: `minimax/minimax-m2`). The 6-file agent profile structure mirrors the 10 label departments (agent.yaml + _context.md + prompts/agent.system.main.role.md + plugins/_model_config/config.json + plugins/_tool_access/config.json + plugins/_skills/config.json). See `.a0proj/agents/{song-architect,lyricist,suno-prompter}/`.
+
+### 13.3 Skill
+
+| Slug | Purpose |
+|---|---|
+| `suno-prompt-compatibility-spec` | Canonical Suno prompt format reference — what makes a prompt "verified Suno-compatible". Mandatory before `suno-prompter` emission. See `.a0proj/skills/suno-prompt-compatibility-spec/SKILL.md`. |
+
+The skill provides: Suno prompt anatomy (4 fields), genre tag vocabulary, lyrics formatting rules (section labels per Suno conventions), negative prompt rules, per-artist role mapping (links to §5.4), and a verification checklist the `suno-prompter` agent runs before emission. UNVERIFIED claims (genre tags, negative-prompt syntax) are marked explicitly in the skill body; Wagner reviews against the current suno.com interface.
+
+### 13.4 Per-artist Suno role mapping (link to §5.4)
+
+| Artist | Suno role | Creative layer output flow |
+|---|---|---|
+| **Wágner** | Suno-assist only | Blueprint + lyrics → suno-prompter emits an ideation-test prompt set (production track is human-recorded in Studio, NOT from Suno). |
+| **Velvut** | Suno-assist only | Same as Wágner. |
+| **DJ Farra** | 100% AI-generated | Blueprint + lyrics → suno-prompter emits a full Suno prompt set (production track is Suno-generated). |
+| **Sobralenses** | 100% AI-generated | Same as DJ Farra. |
+
+The Suno role pre-check is **mandatory** in every blueprint (§13.1 step 1). It drives the downstream pipeline and is the upstream decision the `suno-prompter` consumes. Per-artist Suno role matrix reference: PRD §5.4.
+
+### 13.5 Use case
+
+Wagner starts a song project in wgnr_sounds_label before going to Suno. Inside the project, the 3 creative agents produce finished artifacts (song blueprint + finished lyrics + verified Suno-ready prompts) as separate deliverables. Wagner assembles them, pastes the Suno prompt set into suno.com, and proceeds to the release pipeline (DistroKid → DSPs). The "verified Suno-compatible" claim is auditable via the `suno-prompt-compatibility-spec` skill checklist.
 
 - [x] AI-Readable Block present (Scope, Must-include, Must-not-compress, Counter-prompt), updated for v1.2 corrections (shared-until-dedicated rule + path refresh).
 - [x] TL;DR paragraph ≤ 200 words.
@@ -537,7 +595,24 @@ Every project in this framework should have a Captain orchestrator that owns pro
 
 ---
 
-## 14. v2.1 changelog
+## 15. v3.0 changelog
+
+| Change | Type | Details |
+|---|---|---|
+| Creative Song-Production Layer (NEW in v3.0) | New section | §13 — 3 new creative agents (`song-architect`, `lyricist`, `suno-prompter`) + 1 canonical skill (`suno-prompt-compatibility-spec`). Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (verified Suno-ready prompts). The "verified Suno-compatible" claim is auditable via the skill's verification checklist (§13.3 + §7 of SKILL.md). Per-artist Suno role (PRD §5.4) drives prompt structure. |
+| `song-architect` agent profile scaffolded | New agent | `.a0proj/agents/song-architect/` — Song concept + arrangement + structural design. Department-affiliated: A&R (song-concept subfunction). Model preset: `Default Coding and Reasoning` (judgment tier; matches `ar` and the creative layer's other 2 agents). 6-file structure mirrors existing 10 label departments (agent.yaml + _context.md + prompts/agent.system.main.role.md + plugins/_model_config/config.json + plugins/_tool_access/config.json + plugins/_skills/config.json). Skills enabled: `suno-prompt-compatibility-spec`. |
+| `lyricist` agent profile scaffolded | New agent | `.a0proj/agents/lyricist/` — Song lyric writing. Department-affiliated: Studio (creative-writing subfunction). Model preset: `Default Coding and Reasoning` (judgment tier). 6-file structure. Skills enabled: `suno-prompt-compatibility-spec`. |
+| `suno-prompter` agent profile scaffolded | New agent | `.a0proj/agents/suno-prompter/` — Suno prompt export. Department-affiliated: Distribution & Digital Strategy (Suno export subfunction). Model preset: `Default Coding and Reasoning` (judgment tier; Suno format precision requires judgment-tier). 6-file structure. Skills enabled: `suno-prompt-compatibility-spec`, `suno-integration`, `distrokid-delivery`. Mandatory skill check (verification checklist §7 of SKILL.md) before emission. |
+| `suno-prompt-compatibility-spec` skill scaffolded | New skill | `.a0proj/skills/suno-prompt-compatibility-spec/SKILL.md` — Canonical Suno prompt format reference (4 fields, genre tag vocabulary, lyrics formatting rules, negative-prompt rules, per-artist role mapping, verification checklist). §3-§6 contain UNVERIFIED claims (genre tags, negative-prompt syntax) per source-driven-development protocol; Wagner reviews against current suno.com interface before each release cycle. |
+| `.a0proj/agents.json` v3.0 entry added | Update | 3 new entries registered (count 11 → 14). Each entry includes slug, title, description, model_tier, profile_type (`creative-production`), department_reference (PRD §13), primary_role, model_preset, main_model, skills_enabled, path. Top-level version `2.1.0` → `3.0.0`; count `11` → `14`. |
+| `.a0proj/agents/AGENTS.md` Creative Production Layer section | Update | Added `## Creative Production Layer (v3.0.0)` table after the Department Roster table. 3 new entries listed with slug, title, model tier, preset, parent dept (subfunction). Cross-references PRD §13. Child DOX Index extended with 3 new entries (song-architect, lyricist, suno-prompter). |
+| PRD title + version bump v2.1.0 → v3.0.0 | Update | Title line: `v2.1 (Captain + Foundation)` → `v3.0 (Creative Song-Production Layer)`. Status, Version, Supersedes metadata updated. AI-Readable Block Scope / Must-include / Counter-prompt updated to reference the 3 creative agents + the `suno-prompt-compatibility-spec` skill + the §13 workflow + the per-artist Suno role link. |
+| Department list (§7) — unchanged | No change | Per Wagner decision: existing 10 departments retain their v2.0.0/v2.1.0 model presets, slugs, and skill assignments. The 3 creative agents are a separate layer, NOT label departments. |
+| Existing 5 commits — unchanged | No change | v3.0.0 ADDS a 6th commit on top of v1 (1269210), v1.1 (7f090d4), v1.2 (24facb3), v2.0.0 (f70c06d), v2.1.0 (8fe4b68). No rebase, no amend, no force-push. |
+
+---
+
+## 16. v2.1 changelog
 
 | Change | Type | Details |
 |---|---|---|
@@ -551,7 +626,7 @@ Every project in this framework should have a Captain orchestrator that owns pro
 | Creative agents (lyricist / composer / music-video-producer) — DEFERRED | Out of scope | Per Wagner decision: v3.0.0 work, separate task. v2.1 does NOT scaffold these. |
 | Existing 4 commits — unchanged | No change | v2.1.0 ADDS a 5th commit on top of v1 (1269210), v1.1 (7f090d4), v1.2 (24facb3), v2.0.0 (f70c06d). No rebase, no amend, no force-push. |
 
-## 15. v1.2 changelog
+## 17. v1.2 changelog
 
 | Change | Type | Details |
 |---|---|---|
@@ -572,7 +647,7 @@ Every project in this framework should have a Captain orchestrator that owns pro
 | Open Question §13 added | New | When does Wagner plan to author a dedicated WGNR Sounds brand guide? Drives the §4.2 activation pathway. |
 | AI-Readable Block update | Update | Must-include elements + counter-prompt updated for v1.2: shared-until-dedicated rule, `docs/brand-assets/` path, `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env var, lowercase `wgnr.ai` parent-brand references. |
 
-## 16. v1.1 changelog
+## 18. v1.1 changelog
 
 | Change | Type | Details |
 |---|---|---|

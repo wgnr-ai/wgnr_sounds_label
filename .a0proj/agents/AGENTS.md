@@ -39,6 +39,16 @@ The Captain auto-selects for new chats in this project via `.a0proj/default_agen
 | `sync` | Sync Licensing | execution | Fast Sub-Agent Inference |
 | `operations` | Operations / Label Management | judgment | Default Coding and Reasoning |
 
+## Creative Production Layer (v3.0.0)
+
+| Slug | Title | Model tier | Preset | Parent dept (subfunction) |
+|---|---|---|---|---|
+| `song-architect` | Song Architect (Song Concept & Blueprint) | judgment | Default Coding and Reasoning | A&R (song-concept) |
+| `lyricist` | Lyricist (Song Lyrics) | judgment | Default Coding and Reasoning | Studio (creative-writing) |
+| `suno-prompter` | Suno Prompter (Suno Export) | judgment | Default Coding and Reasoning | Distribution & Digital Strategy (Suno export) |
+
+The 3 creative agents are NOT label departments — they form a separate **Creative Production Layer** that operates upstream of the label's release pipeline. Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (Suno-ready prompts). The `suno-prompt-compatibility-spec` skill is the canonical Suno format reference for `suno-prompter` (mandatory before emission). Cross-reference: PRD §13 (Creative Song-Production Layer, v3.0.0).
+
 ## Child DOX Index
 
 | Path | Scope |
@@ -54,6 +64,9 @@ The Captain auto-selects for new chats in this project via `.a0proj/default_agen
 | `.a0proj/agents/artist-relations/` | Artist Relations — Direct liaison with signed artists. Day-to-day relationship management. |
 | `.a0proj/agents/sync/` | Sync Licensing — Place the label's catalog in film, TV, advertising, and video games. Adjacent-revenue engine. Aspirational — no active sync pitching today; activates if a publishing-administration partnership is signed. |
 | `.a0proj/agents/operations/` | Operations / Label Management — The glue. Owns inter-department workflow, the release calendar, the budget envelope, and the reporting cadence. |
+| `.a0proj/agents/song-architect/` | Song Architect — Creative Production Layer (v3.0.0). Develops the song idea — concept, structure, arrangement, genre/mood/tempo blueprint. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint. Upstream of `lyricist` and `suno-prompter`. Department affiliation: A&R (song-concept subfunction). |
+| `.a0proj/agents/lyricist/` | Lyricist — Creative Production Layer (v3.0.0). Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header. Department affiliation: Studio (creative-writing subfunction). |
+| `.a0proj/agents/suno-prompter/` | Suno Prompter — Creative Production Layer (v3.0.0). Translates the song blueprint + finished lyrics into verified Suno-compatible prompts. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure. Skill: `suno-prompt-compatibility-spec` is mandatory before emission. Department affiliation: Distribution & Digital Strategy (Suno export subfunction). |
 
 ## Conventions
 
