@@ -1,0 +1,47 @@
+name: publicity
+title: Publicity / PR
+description: Earns media coverage and shapes public narrative around releases and artists. Owns press releases, media relationships, interview coordination, and embargo management.
+version: 2.0.0
+created: 2026-08-30
+updated: 2026-08-30
+owner: Wagner dos Santos (Principal)
+profile_type: label-department
+department: Publicity / PR
+model_tier: judgment
+context: Use this agent for Earn media coverage and shape the public narrative around releases and artists. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
+dependencies:
+  - Marketing & Promotion
+  - Distribution & Digital Strategy
+  - Artist Relations
+tools_required:
+  - code_execution_tool
+  - text_editor
+  - response
+  - skills_tool
+  - memory_load
+  - memory_save
+default_tools_disabled:
+  - local:a2a_chat
+  - local:notify_user
+  - local:scheduler
+  - mcp:apollo_mcp:*
+  - mcp:hunter_mcp:*
+  - mcp:lusha_mcp:*
+  - mcp:opencorporates_mcp:*
+  - mcp:rocketreach_mcp:*
+  - mcp:spiderfoot_mcp:*
+  - mcp:valyu:*
+  - mcp:whois_mcp:*
+  - plugin:_browser:browser
+  - plugin:_goal:goal
+  - plugin:_memory:behaviour_adjustment
+  - plugin:_office:office_artifact
+  - plugin:email_companion:email_companion
+  - plugin:file_guard:file_guard_restore
+  - plugin:wgnr_task_manager:todo_tool
+skills_enabled:
+  []
+model_preset: Default Coding and Reasoning
+avatar:
+  kind: color
+  value: '#6EA8DB'
