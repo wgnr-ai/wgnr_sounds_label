@@ -1,0 +1,1 @@
+/a0/usr/plugins/wgnr_ai_os/prompts/wos-spec.promptinclude.md
