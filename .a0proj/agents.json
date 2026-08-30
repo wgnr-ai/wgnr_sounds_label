@@ -148,8 +148,27 @@
         "distrokid-delivery"
       ],
       "path": ".a0proj/agents/operations/agent.yaml"
+    },
+    {
+      "slug": "wgnr-sounds-captain",
+      "title": "WGNR Sounds Captain",
+      "description": "Project orchestrator — coordinates the 10 label departments and 5 skills per PRD §7.",
+      "model_tier": "judgment",
+      "profile_type": "project-orchestrator",
+      "department_reference": "PRD §7 + §12 (WGNR Sounds Record Label v2.1)",
+      "primary_role": "orchestration",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-integration",
+        "distrokid-delivery",
+        "beg-catalog-metadata",
+        "ascap-publishing",
+        "rosters-and-catalog-reconciliation"
+      ],
+      "path": ".a0proj/agents/wgnr-sounds-captain/"
     }
   ],
-  "version": "2.0.0",
-  "count": 10
+  "version": "2.1.0",
+  "count": 11
 }

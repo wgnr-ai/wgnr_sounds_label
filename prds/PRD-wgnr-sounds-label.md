@@ -1,20 +1,20 @@
-# PRD: WGNR Sounds Record Label — v1.2 (Corrected Foundation)
+# PRD: WGNR Sounds Record Label — v2.1 (Captain + Foundation)
 
-> **Scope:** This PRD defines the v1.2 foundation for the WGNR Sounds Record Label project — the canonical department catalog, operating model, brand identity (with the **shared-until-dedicated brand-guide rule** introduced in v1.2), roster & catalog (active + historical BEG), release lifecycle, distribution pipeline (DistroKid + per-artist Suno flow), and the WGNR Sounds Music Publishing sub-entity. v1.2 absorbs Wagner's primary-source corrections (2026-08-30): (a) the active brand guide is now the **shared wgnr.ai brand guide** (not a Sounds-specific guide that doesn't yet exist); (b) casing sweep across all files (`division of WGNR` → `division of wgnr.ai`, `WGNR, LLC` → `wgnr.ai, LLC`); (c) brand-asset path refresh from `.a0proj/knowledge/client-assets/wgnr-sounds-assets/` to `docs/brand-assets/`; (d) `.a0proj/project.json` instructions field rewrite. v1.2 stops at the specification level: it does NOT scaffold agent profiles, skills, plugins, working simulations, or distribution partner integrations. Department entries are **functional domains**, not pre-built agent profiles; v2 will translate each domain into one or more agent profiles.
+> **Scope:** This PRD defines the v2.1 build of the WGNR Sounds Record Label project. v2.1 preserves all v1.2 foundation content (canonical department catalog, operating model, shared-until-dedicated brand-guide rule, roster & catalog, release lifecycle, DistroKid pipeline, ASCAP Music Publishing sub-entity) and adds the **project Captain** (`wgnr-sounds-captain`) — an orchestrator agent profile that auto-selects for new chats in this project via `.a0proj/default_agent.json`, delegates execution to the 10 label department agents, and activates the 5 label-specific skills per §7. v2.1 is the v2.0.0 follow-up that closes the Captain-pattern gap: every project in this framework should have a Captain orchestrator that owns project-specific workflow, and `wgnr_sounds_label` is the second project (after `wgnr_ai_sysop`) to formalize this. v2.1 does NOT scaffold the creative agents (lyricist / composer / music-video-producer) — those are v3.0.0 work.
 >
-> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/` (Wagner dropped 4 logo PNGs on 2026-08-30; brand-guide PDF placeholder still pending). (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **DistroKid is the sole distributor since 2023** (not a generic DSP placeholder). (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds; documented under Legal & Business Affairs. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) v1.2 scope is PRD + project skeleton + brand assets scaffold + casing sweep + project.json v1.2 alignment ONLY.
+> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/`. (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **DistroKid is the sole distributor since 2023**. (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) **v2.1 NEW**: `wgnr-sounds-captain` agent profile at `.a0proj/agents/wgnr-sounds-captain/` mirrors `sysop-captain` (sysop is the canonical reference). (10) **v2.1 NEW**: `.a0proj/default_agent.json` (`{"agent": "wgnr-sounds-captain"}`) wires the Captain as the project auto-selected default per the canonical design at `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md`.
 >
-> **Must-not-compress lists:** Departments: 10 items (numbered §7.1–§7.10). Release-lifecycle phases: 7 stages. Suno role matrix: 4 artists × 4 columns (Artist / Suno role / Master source / Distribution flow). Open Questions: must be enumerated individually so each can be resolved independently in v2. BEG sub-imprints: 4 (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks). v1.2 §4 brand-identity subsections: 6 (4.1 active guide, 4.2 future guide, 4.3 logo assets, 4.4 color tokens, 4.5 Music Publishing unchanged, 4.6 cross-reference handling).
+> **Must-not-compress lists:** Departments: 10 items (numbered §7.1–§7.10). Release-lifecycle phases: 7 stages. Suno role matrix: 4 artists × 4 columns (Artist / Suno role / Master source / Distribution flow). Open Questions: must be enumerated individually so each can be resolved independently. BEG sub-imprints: 4 (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks). Captain dependencies: 10 department agents + 5 skills. v1.2 §4 brand-identity subsections: 6.
 >
-> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented (wgnr.ai guide is the active source until a Sounds guide ships)? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is DistroKid named as the sole distributor with the year (2023)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/` (NOT `.a0proj/knowledge/client-assets/wgnr-sounds-assets/`)? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)?
+> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is DistroKid named as the sole distributor with the year (2023)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/`? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)? (10) Is the v2.1 Captain (`wgnr-sounds-captain`) documented with the canonical reference path? (11) Is `.a0proj/default_agent.json` documented as the framework default-agent wiring mechanism?
 
-**Status:** Draft (v1.2)  
-**Version:** v1.2.0  
+**Status:** Draft (v2.1)  
+**Version:** v2.1.0  
 **Date:** 2026-08-30  
-**Supersedes:** v1.1.0 (commit `7f090d4`)  
+**Supersedes:** v1.2.0 (commit `24facb3`)  
 **Author:** wgnr.ai Ops (Orchestrator)  
 **Owners:** Wagner dos Santos (Principal) / WGNR Sounds Label project (build + manage)  
-**Related:** `/a0/usr/projects/wgnr_ai_sysop/docs/projects-guide.md` (project structure), `/a0/usr/projects/wgnr_ai_sysop/prds/PRD-wgnr-task-manager.md` (PRD format reference)
+**Related:** `/a0/usr/projects/wgnr_ai_sysop/docs/projects-guide.md` (project structure), `/a0/usr/projects/wgnr_ai_sysop/prds/PRD-wgnr-task-manager.md` (PRD format reference), `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md` (Captain auto-selection design)
 
 ---
 
@@ -476,7 +476,49 @@ v1.2 ships only the project skeleton, the corrected PRD, and the brand assets sc
 - `docs/brand-assets/` — WGNR Sounds brand assets folder (4 logos dropped by Wagner on 2026-08-30 + brand-guide PDF placeholder sentinel).
 - `/a0/usr/projects/wgnr_ai_sysop/prompt_includes/ai-readable-document-pattern.promptinclude.md` — AI-Readable Block convention used in this PRD.
 
-## 12. Closeout checklist
+## 12. Project Captain — wgnr-sounds-captain (NEW in v2.1)
+
+WGNR Sounds ships a **project Captain** (`wgnr-sounds-captain`) — an orchestrator agent profile that auto-selects for new chats in this project and delegates execution to the 10 label department specialists.
+
+### 12.1 Pattern
+
+The Captain pattern is the canonical project-orchestrator convention ratified for `wgnr_ai_sysop` on 2026-08-18. Reference design: `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md`. `wgnr_sounds_label` is the second project (after `wgnr_ai_sysop`) to formalize this pattern; the New Project Build SOP (effective 2026-08-30) requires every new project to scaffold a Captain.
+
+### 12.2 File structure
+
+```
+.a0proj/agents/wgnr-sounds-captain/
+├── agent.yaml                                      # agent definition
+├── prompts/agent.system.main.specifics.md          # Captain role prompt
+├── plugins/_model_config/config.json               # model preset
+└── assets/avatar.webp                              # captain avatar
+.a0proj/default_agent.json                          # framework auto-select wiring
+.a0proj/agents.json                                # Captain registered as entry #11
+```
+
+The Captain mirrors the structure of `sysop-captain` at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/sysop-captain/` (4 files: `agent.yaml` + `prompts/agent.system.main.specifics.md` + `plugins/_model_config/config.json` + `assets/avatar.webp`). Department agent profiles under `.a0proj/agents/{ar,marketing,...}/` retain their existing structure (per the wgnr-project-dev template) and are NOT restructured by v2.1.
+
+### 12.3 Default agent wiring
+
+`.a0proj/default_agent.json` contains the 1-line config the framework reads to auto-select the Captain for new chats in this project:
+
+```json
+{"agent": "wgnr-sounds-captain"}
+```
+
+Per the canonical design doc §2.1, the file lives in a NEW dedicated file (NOT `agents.json` — normalizer corruption risk; NOT `project.json` — header normalizer strips unknown keys). Absence of the file = Captain pattern fully inert (zero blast radius for projects without the file).
+
+The default applies ONLY when the context still runs the global default profile — manual per-chat selections are never overridden. See design doc §2.4 Behavior Matrix for the full set of scenarios.
+
+### 12.4 Capabilities
+
+The Captain orchestrates the 10 canonical label departments per §7 — `ar`, `marketing`, `distribution`, `publicity`, `legal`, `royalties`, `studio`, `artist-relations`, `sync`, `operations` — and activates the 5 label-specific skills: `suno-integration`, `distrokid-delivery`, `beg-catalog-metadata`, `ascap-publishing`, `rosters-and-catalog-reconciliation`. Model preset: `Default Coding and Reasoning` (matches the judgment-tier departments in v2.0.0; orchestrator needs creative + strategic capability).
+
+### 12.5 Why a Captain
+
+Every project in this framework should have a Captain orchestrator that owns project-specific workflow. Without a Captain, new chats default to the global profile (`wgnr-ai-ops`) and lose label-specific context (multi-genre discipline, DistroKid pipeline, Suno role matrix, ASCAP Music Publishing). The Captain restores project-aware defaults without per-chat manual selection.
+
+## 13. Closeout checklist
 
 - [x] AI-Readable Block present (Scope, Must-include, Must-not-compress, Counter-prompt), updated for v1.2 corrections (shared-until-dedicated rule + path refresh).
 - [x] TL;DR paragraph ≤ 200 words.
@@ -495,7 +537,21 @@ v1.2 ships only the project skeleton, the corrected PRD, and the brand assets sc
 
 ---
 
-## 13. v1.2 changelog
+## 14. v2.1 changelog
+
+| Change | Type | Details |
+|---|---|---|
+| `wgnr-sounds-captain` agent profile scaffolded | New agent | New profile at `.a0proj/agents/wgnr-sounds-captain/` mirrors `sysop-captain` structure (agent.yaml + prompts/agent.system.main.specifics.md + plugins/_model_config/config.json + assets/avatar.webp). Model preset: `Default Coding and Reasoning` (judgment tier; matches the 6 judgment-tier departments in v2.0.0). |
+| `.a0proj/default_agent.json` created | New file | 1-line config `{"agent": "wgnr-sounds-captain"}` wires the Captain as the project auto-selected default per the canonical design at `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md`. Format chosen per §2.1 of the design doc (NOT `agents.json` — normalizer corruption risk; NOT `project.json` — header normalizer strips unknown keys). |
+| `.a0proj/agents.json` Captain entry added | Update | Captain registered as entry #11 (count 10 → 11). Schema mirrors existing 10 dept entries; `model_preset: "Default Coding and Reasoning"`; `main_model: "zai_coding/glm-5.1"`; `skills_enabled`: 5 label-specific skills; `path: ".a0proj/agents/wgnr-sounds-captain/"`. |
+| `.a0proj/agents/AGENTS.md` Captain section | Update | Added `## Project Orchestrator (Captain)` table above `## Department Roster`. Captain entry added as FIRST entry in `## Child DOX Index`. Conventions paragraph updated to note Captain mirrors sysop-captain structure. |
+| PRD §12 (NEW) Project Captain | New section | Documents the Captain pattern (reference design path), file structure (4-file mirror of sysop-captain), default-agent wiring (`.a0proj/default_agent.json` with the 1-line config), capabilities (10 dept agents + 5 skills), and rationale (every project should have a Captain; wgnr_sounds_label is the second project after sysop). |
+| PRD title + version bump v1.2.0 → v2.1.0 | Update | Title line: `v1.2 (Corrected Foundation)` → `v2.1 (Captain + Foundation)`. Status, Version, Supersedes metadata updated. AI-Readable Block Scope / Must-include / Counter-prompt updated to reference the Captain + default_agent.json. |
+| Department list (§7) — unchanged | No change | Per Wagner decision: existing 10 departments retain their v2.0.0 model presets, slugs, and skill assignments. Captain delegates to them; it does NOT replace them. |
+| Creative agents (lyricist / composer / music-video-producer) — DEFERRED | Out of scope | Per Wagner decision: v3.0.0 work, separate task. v2.1 does NOT scaffold these. |
+| Existing 4 commits — unchanged | No change | v2.1.0 ADDS a 5th commit on top of v1 (1269210), v1.1 (7f090d4), v1.2 (24facb3), v2.0.0 (f70c06d). No rebase, no amend, no force-push. |
+
+## 15. v1.2 changelog
 
 | Change | Type | Details |
 |---|---|---|
@@ -516,7 +572,7 @@ v1.2 ships only the project skeleton, the corrected PRD, and the brand assets sc
 | Open Question §13 added | New | When does Wagner plan to author a dedicated WGNR Sounds brand guide? Drives the §4.2 activation pathway. |
 | AI-Readable Block update | Update | Must-include elements + counter-prompt updated for v1.2: shared-until-dedicated rule, `docs/brand-assets/` path, `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env var, lowercase `wgnr.ai` parent-brand references. |
 
-## 14. v1.1 changelog
+## 16. v1.1 changelog
 
 | Change | Type | Details |
 |---|---|---|

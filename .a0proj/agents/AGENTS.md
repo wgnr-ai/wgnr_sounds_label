@@ -16,6 +16,14 @@ Project-scoped agent profiles for the WGNR Sounds Record Label project — the 1
 - For wgnr.ai SysOp work, use the project-scoped variants in `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/`. For WGNR Sounds label work, use the profiles here.
 - These agents are dispatched via the project-agent surface, not the `call_subordinate` profile registry.
 
+## Project Orchestrator (Captain)
+
+| Slug | Title | Model tier | Preset |
+|---|---|---|---|
+| `wgnr-sounds-captain` | WGNR Sounds Captain (project orchestrator) | judgment | Default Coding and Reasoning |
+
+The Captain auto-selects for new chats in this project via `.a0proj/default_agent.json` (`{"agent": "wgnr-sounds-captain"}`), per the canonical pattern at `/a0/usr/projects/wgnr_ai_sysop/docs/designs/2026-08-18-project-default-agent.md`. The Captain delegates execution to the 10 department agents and activates the 5 label-specific skills per PRD §7.
+
 ## Department Roster (10 canonical, per PRD §7)
 
 | Slug | Title | Model tier | Preset |
@@ -35,6 +43,7 @@ Project-scoped agent profiles for the WGNR Sounds Record Label project — the 1
 
 | Path | Scope |
 |---|---|
+| `.a0proj/agents/wgnr-sounds-captain/` | WGNR Sounds Captain — project orchestrator. Coordinates the 10 label departments and 5 label-specific skills per PRD §7. Auto-selected for new chats via `.a0proj/default_agent.json`. |
 | `.a0proj/agents/ar/` | A&R (Artist & Repertoire) — Find, sign, and develop artists. The creative taste-making function of the label. |
 | `.a0proj/agents/marketing/` | Marketing & Promotion — Build and execute the go-to-market plan for each release. Make listeners care. |
 | `.a0proj/agents/distribution/` | Distribution & Digital Strategy — Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is DistroKid (in continuous use since 2023). |
@@ -48,7 +57,7 @@ Project-scoped agent profiles for the WGNR Sounds Record Label project — the 1
 
 ## Conventions
 
-- Each agent profile mirrors the structure at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/wgnr-project-dev/` (agent.yaml + _context.md + prompts/ + plugins/).
+- The wgnr-sounds-captain profile mirrors the structure at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/sysop-captain/` (agent.yaml + prompts/agent.system.main.specifics.md + plugins/_model_config/ + assets/avatar.webp). Department agent profiles mirror the structure at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/wgnr-project-dev/` (agent.yaml + _context.md + prompts/ + plugins/).
 - Model preset is canonical from `/a0/usr/projects/wgnr_ai_sysop/.a0proj/knowledge/model_presets_v1.csv`. See each agent's `_context.md` for tier rationale and any deviation notes.
 - All agents inherit the WGNR Sounds brand rule (shared-until-dedicated), the DistroKid sole-distributor contract, and the multi-genre / eclectic discipline.
 
