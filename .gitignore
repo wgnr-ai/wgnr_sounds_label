@@ -1,0 +1,32 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+venv/
+.env
+
+# LibreOffice lock files (auto-generated when ODS is open, not source of truth)
+*.~lock.*
+**/.~lock.*
+
+# File Guard plugin backup directories (auto-generated, not source of truth)
+.file_guard_backups/
+**/.file_guard_backups/
+
+# Framework-generated memory index files (auto-regen, not source of truth)
+.a0proj/memory/index.faiss
+.a0proj/memory/index.faiss.sha256
+.a0proj/memory/index.pkl
+
+# Runtime state files (auto-regen, not source of truth)
+.a0proj/state/
+
+# Redundant project metadata (content lives in .a0proj/instructions/ and prompt_includes/)
+.a0proj/project.json
+
+# Logs and secrets
+*.log
+**/secrets.env
+**/.env
+**/.env.*
