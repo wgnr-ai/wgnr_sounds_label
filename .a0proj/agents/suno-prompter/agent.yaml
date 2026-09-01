@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: creative-production
 department: Distribution & Digital Strategy
 model_tier: judgment
-context: Use this agent for Suno prompt export for the WGNR Sounds DistroKid pipeline. Produces a Suno-ready prompt document (main prompt + lyrics field + negative prompt + title metadata + Suno role verification per PRD §5.4). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md §13 (Creative Song-Production Layer) as the canonical contract. Skill: suno-prompt-compatibility-spec is mandatory before emission.
+context: "Use this agent for Suno prompt export for the WGNR Sounds DistroKid pipeline. Produces a Suno-ready prompt document (main prompt + lyrics field + negative prompt + title metadata + Suno role verification per PRD §5.4). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md §13 (Creative Song-Production Layer) as the canonical contract. Skill: suno-prompt-compatibility-spec is mandatory before emission."
 dependencies:
   - song-architect
   - lyricist

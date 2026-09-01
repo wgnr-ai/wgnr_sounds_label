@@ -1,0 +1,7 @@
+{
+  "model_preset": "Default Coding and Reasoning",
+  "main_model": "zai_coding/glm-5.3",
+  "utility_model": "minimax/minimax-m2",
+  "rationale": "Creative + strategic output requires judgment-tier reasoning. Lyric writing is craft work — the model must hold persona, structure, and narrative coherence simultaneously. Fast-sub-agent execution is not appropriate for primary lyric drafting.",
+  "preset_group": "Default Coding and Reasoning"
+}

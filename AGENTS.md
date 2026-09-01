@@ -52,6 +52,7 @@ For v1, every meaningful change requires a DOX pass before the task is done. v1 
 |---|---|
 | `prds/AGENTS.md` | Product Requirements Documents — build contracts (v1: one PRD for label foundation) |
 | `docs/AGENTS.md` | Human-facing docs hub (placeholder for v2) |
+| `dev-tickets/AGENTS.md` | Engineering tickets — bug fixes, scaffold defects, framework gaps (added 2026-08-31) |
 
 ## Related Paths
 

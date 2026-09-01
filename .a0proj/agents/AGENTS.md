@@ -16,6 +16,13 @@ Project-scoped agent profiles for the WGNR Sounds Record Label project — the 1
 - For wgnr.ai SysOp work, use the project-scoped variants in `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/`. For WGNR Sounds label work, use the profiles here.
 - These agents are dispatched via the project-agent surface, not the `call_subordinate` profile registry.
 
+## Per-Artist Vocal Identity (Principal declaration, 2026-08-31)
+
+- **Wágner** and **Velvut** vocalist: **Wagner dos Santos (Principal) — baritone male singer.**
+- All creative work for **Wágner** or **Velvut** — blueprints, lyric perspective, Suno prompts, studio plans — MUST assume **baritone male vocals**, regardless of the vocalist/sex of any reference or inspiration track (a female-performed reference does NOT change this).
+- Suno prompt sets for these two artists use male-vocal descriptors and exclude `female vocal` in the negative prompt (see `suno-prompt-compatibility-spec` §5–§6).
+- **DJ Farra** and **Sobralenses** (100% AI-generated) are NOT bound by this rule; their vocal personas are chosen per project.
+
 ## Project Orchestrator (Captain)
 
 | Slug | Title | Model tier | Preset |

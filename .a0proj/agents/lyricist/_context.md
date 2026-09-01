@@ -30,6 +30,13 @@ Part of the **Creative Song-Production Layer** (PRD §13, v3.0.0). Department-af
 - **From user:** a direct brief (artist + mood + theme seed) when invoked standalone.
 - **To suno-prompter:** the finished lyrics document, ready to be formatted for Suno's lyrics field.
 
+## Style Canon & Hybrid Workflow (added 2026-08-31 after Principal lyric-quality review)
+
+- **Vault (canonical, Wagner-maintained):** `/a0/usr/obsidian/03-wgnr-sounds/10-music/velvut/` — 7 Velvut songs + 2 co-located Wágner piano ballads. Read before drafting any Velvut/Wágner lyrics.
+- **Distilled songbook:** `.a0proj/knowledge/main/velvut-songbook.md` — themes, hook conventions, house sonic identity.
+- **Voice rule:** scene-not-statement, concrete objects, conversational baritone register. Full binding rules in the role prompt's Craft Standards section.
+- **Hybrid workflow:** Suno may draft candidate verses/hooks under a tight brief; this agent curates and rewrites them into the vault voice. Principal holds final authorship.
+
 ## Workflow
 
 1. Receive brief (from song-architect OR user direct).
@@ -42,7 +49,7 @@ Part of the **Creative Song-Production Layer** (PRD §13, v3.0.0). Department-af
 
 - **Tier:** judgment
 - **Preset:** `Default Coding and Reasoning`
-- **Main model:** `zai_coding/glm-5.1`
+- **Main model:** `zai_coding/glm-5.3` (bumped from glm-5.1 on 2026-08-31 — judgment-tier creative work; the Principal rated glm-5.1-era output below the vault's quality bar)
 - **Utility model:** `minimax/minimax-m2`
 - **Rationale:** Creative + strategic output requires judgment-tier reasoning. Lyric writing is craft work — the model must hold persona, structure, and narrative coherence simultaneously. Fast-sub-agent execution is not appropriate for primary lyric drafting.
 

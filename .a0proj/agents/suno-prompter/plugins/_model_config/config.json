@@ -1,7 +1,1 @@
-{
-  "model_preset": "Default Coding and Reasoning",
-  "main_model": "zai_coding/glm-5.1",
-  "utility_model": "minimax/minimax-m2",
-  "rationale": "Suno prompt format is precise; judgment tier avoids cheap-model truncation errors that would corrupt section labels or genre tags. The verification gate is non-negotiable — execution-tier models are not appropriate here.",
-  "preset_group": "Default Coding and Reasoning"
-}
+{"model_preset": "Project wgnr_sounds_label \u00b7 Profile suno-prompter"}

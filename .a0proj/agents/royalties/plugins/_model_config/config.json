@@ -1,7 +1,1 @@
-{
-  "model_preset": "Fast Sub-Agent Inference",
-  "main_model": "cerebras/gpt-oss-120b",
-  "utility_model": "cerebras/gemma-4-31b",
-  "rationale": "Fast throughput for clear-spec operational work; closest analog to spec's gpt-5-mini (execution). Spec deviation: gpt-5-mini is not in the canonical preset CSV; Fast Sub-Agent Inference is the closest match by role (Cerebras-served, fast, sub-agent oriented).",
-  "preset_group": "Fast Sub-Agent Inference"
-}
+{"model_preset": "Project wgnr_sounds_label \u00b7 Profile royalties"}

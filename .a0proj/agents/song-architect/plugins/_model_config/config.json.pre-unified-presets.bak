@@ -1,0 +1,7 @@
+{
+  "model_preset": "Default Coding and Reasoning",
+  "main_model": "zai_coding/glm-5.1",
+  "utility_model": "minimax/minimax-m2",
+  "rationale": "Song concept + arrangement + structural design is judgment-tier creative work. The blueprint is the upstream artifact that drives both the lyricist (downstream) and the suno-prompter (downstream); errors here cascade. Fast-sub-agent execution is not appropriate.",
+  "preset_group": "Default Coding and Reasoning"
+}

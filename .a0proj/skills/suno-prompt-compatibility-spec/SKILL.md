@@ -141,8 +141,8 @@ The WGNR Sounds roster splits between two pipelines. The Suno role drives the pr
 |---|---|---|
 | **DJ Farra** | 100% AI-generated | Suno generates full track. Style prompt carries full instrumentation + vocal style + mood + arrangement. Lyrics field carries finished lyrics formatted per §4. Negative prompt typically empty or minimal. |
 | **Sobralenses** | 100% AI-generated | Same as DJ Farra. |
-| **Velvut** | Suno-assist only | Suno used for song-idea / concept testing. Style prompt may be exploratory; the production track is human-recorded in Studio, NOT from Suno. Negative prompt may include `polished, mastered, final` to discourage treating the Suno output as a release master. |
-| **Wágner** | Suno-assist only | Same as Velvut. |
+| **Velvut** | Suno-assist only | Suno used for song-idea / concept testing. Style prompt may be exploratory; the production track is human-recorded in Studio, NOT from Suno. Negative prompt may include `polished, mastered, final` to discourage treating the Suno output as a release master. **Vocal identity (Principal-declared 2026-08-31): Wagner dos Santos — baritone male.** All Velvut work assumes baritone male vocals regardless of reference-track vocalist; style prompts use male-vocal descriptors, negative prompt excludes `female vocal`. |
+| **Wágner** | Suno-assist only | Same as Velvut — including the baritone male vocal identity (Wagner dos Santos is the vocalist). |
 
 **Critical:** the suno-prompter agent MUST emit the Suno role verdict in every prompt set, with rationale linking back to PRD §5.4.
 

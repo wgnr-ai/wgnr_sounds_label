@@ -1,7 +1,1 @@
-{
-  "model_preset": "Default Coding and Reasoning",
-  "main_model": "zai_coding/glm-5.1",
-  "utility_model": "minimax/minimax-m2",
-  "rationale": "Best reasoning tier for creative + strategic + analytical work; closest analog to spec's opus-4-7 / sonnet-4.6 (judgment, precision). Spec deviation: opus-4-7 and sonnet-4.6 are not in the canonical preset CSV; Default Coding and Reasoning is the closest match by tier (200K ctx, top-tier reasoning).",
-  "preset_group": "Default Coding and Reasoning"
-}
+{"model_preset": "Project wgnr_sounds_label \u00b7 Profile legal"}

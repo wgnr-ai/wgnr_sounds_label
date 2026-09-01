@@ -27,7 +27,7 @@ default_tools_disabled:
   - local:scheduler
   - mcp:apollo_mcp:*
   - mcp:hunter_mcp:*
- - mcp:lusha_mcp:*
+  - mcp:lusha_mcp:*
   - mcp:opencorporates_mcp:*
   - mcp:rocketreach_mcp:*
   - mcp:spiderfoot_mcp:*
