@@ -46,6 +46,16 @@ For v1, every meaningful change requires a DOX pass before the task is done. v1 
 - Document stable contracts, not diary entries.
 - Document the parent-child brand relationship (WGNR Sounds is a division of wgnr.ai; until a dedicated WGNR Sounds brand guide ships, the wgnr.ai brand guide is the active source per the shared-until-dedicated rule).
 
+## Mailbox (docs/mailbox/)
+
+A persistent dropbox for project-relevant files that survive across sessions. When the Principal drops a file here, the file is durable context that future sessions should pick up.
+
+- **Purpose:** Cross-session file handoff (Principal drops a PDF/reference the project should know about)
+- **Session-start scan:** Scanned on every `/start` invocation (project-scoped) and `/start-all` invocation (sysop cross-project view). New or modified files appear in the mailbox summary.
+- **Behavior:** Read any file present, treat contents as authoritative Principal context, integrate with existing project state.
+- **Trust:** Files here are Principal-authored. They override project AGENTS.md only when Principal intent is explicit; otherwise integrate with existing rules.
+- **Default scan window:** 30 days mtime. Older files stay silent unless explicitly opened.
+
 ## Child DOX Index
 
 | Path | Scope |

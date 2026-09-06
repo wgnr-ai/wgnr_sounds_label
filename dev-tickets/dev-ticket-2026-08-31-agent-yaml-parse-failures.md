@@ -36,6 +36,8 @@ Four WGNR Sounds project agents (`royalties`, `sync`, `lyricist`, `suno-prompter
 
 Note: `helpers/subagents.py` is Agent Zero framework core — per `/a0/AGENTS.md` permissions, modifying it requires Principal approval. Option (c) avoids framework changes entirely and can ship inside this project today.
 
+**Filed with SysOp 2026-09-06 (Principal-directed):** `/a0/usr/projects/wgnr_ai_sysop/dev-tickets/dev-ticket-2026-09-06-agent-yaml-silent-drop-guard.md`. This ticket stays open until the guard ships and is verified against the acceptance criteria above.
+
 ## Acceptance Criteria
 
 - [x] All four agents (`royalties`, `sync`, `lyricist`, `suno-prompter`) load and are callable via `call_subordinate` (verified 2026-08-31)

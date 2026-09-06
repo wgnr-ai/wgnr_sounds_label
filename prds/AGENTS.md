@@ -50,3 +50,4 @@ WGNR Sounds is a **division of wgnr.ai** (parent-child relationship). The PRD re
 | Path | Scope |
 |---|---|
 | `PRD-wgnr-sounds-label.md` | v1.1 foundation PRD — label identity (division-of-WGNR framing), operating model, 10 canonical departments, per-artist Suno role matrix, DistroKid distribution pipeline, WGNR Sounds Music Publishing sub-entity, active roster + BEG historical catalog, release lifecycle, open questions |
+| `PRD-wgnr-sounds-video-production.md` | v1.0.0 draft — Visual Production Layer: 3 video agents (`video-director`, `video-engineer`, `video-coordinator`) + 2 skills; local ComfyUI/open-weights pipeline on Mac Studio MPS; Velvut Visual Constitution; Draft-First render gating; first deliverable Velvut "Take Me Back" music video |
