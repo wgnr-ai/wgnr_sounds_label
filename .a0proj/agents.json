@@ -214,8 +214,55 @@
         "distrokid-delivery"
       ],
       "path": ".a0proj/agents/suno-prompter/agent.yaml"
+    },
+    {
+      "slug": "video-director",
+      "title": "Video Director (Treatment & Vision)",
+      "description": "Central vision-holder per artist (Velvut first) for WGNR Sounds music videos. Produces treatments, storyboards, and shot lists under the Velvut Visual Constitution, enforces the Constitution at review gates, and recommends draft-preview judgments to the Principal. Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
+      "model_tier": "judgment",
+      "profile_type": "visual-production",
+      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
+      "primary_role": "Music video treatment and vision per artist (Velvut first) — treatment, storyboard, shot list, Constitution enforcement, draft-preview judgment recommendations.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.3",
+      "skills_enabled": [
+        "velvut-visual-constitution",
+        "comfyui-video-pipeline"
+      ],
+      "path": ".a0proj/agents/video-director/agent.yaml"
+    },
+    {
+      "slug": "video-engineer",
+      "title": "Video Engineer (ComfyUI Pipeline)",
+      "description": "Builds and runs the local ComfyUI video pipeline for WGNR Sounds — workflow graphs, open-weights model ops on Apple Silicon MPS, Draft-First render ladder, audio-reactive beat mapping, ffmpeg stitch + finishing. Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
+      "model_tier": "precision",
+      "profile_type": "visual-production",
+      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
+      "primary_role": "ComfyUI workflow engineering and render execution — low-res motion-vector drafts, gated hi-res cycles, beat mapping, ffmpeg stitch + finishing.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.3",
+      "skills_enabled": [
+        "velvut-visual-constitution",
+        "comfyui-video-pipeline"
+      ],
+      "path": ".a0proj/agents/video-engineer/agent.yaml"
+    },
+    {
+      "slug": "video-coordinator",
+      "title": "Video Coordinator (Render Ops & Delivery)",
+      "description": "Runs render-queue operations for the WGNR Sounds video pipeline — asset naming and version tracking, Draft-First gate logging, disk hygiene on the Mac Studio, delivery packaging per platform specs (YouTube 16:9, TikTok/Reels 9:16). Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
+      "model_tier": "execution",
+      "profile_type": "visual-production",
+      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
+      "primary_role": "Video render-queue operations and delivery packaging — gate logging, naming, versioning, disk hygiene, platform-spec deliverables.",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "cerebras/gpt-oss-120b",
+      "skills_enabled": [
+        "comfyui-video-pipeline"
+      ],
+      "path": ".a0proj/agents/video-coordinator/agent.yaml"
     }
   ],
-  "version": "3.0.0",
-  "count": 14
+  "version": "4.0.0",
+  "count": 17
 }

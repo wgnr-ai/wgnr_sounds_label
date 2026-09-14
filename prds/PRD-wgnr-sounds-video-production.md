@@ -1,21 +1,21 @@
 # PRD: WGNR Sounds Visual Production Layer — Local AI Video Pipeline & Agent Team
 
-**Version:** 1.0.0 (draft)
-**Date:** 2026-09-06
+**Version:** 1.1.1 (draft)
+**Date:** 2026-09-06 (v1.0.0) · amended 2026-09-13 (v1.1.0 — video-project track re-bind, Principal liberty directive) · amended 2026-09-14 (v1.1.1 — video-grid tempo supersession, Principal ruling)
 **Status:** draft
 **Author:** wgnr-sounds-captain (orchestrator), from the Principal's Velvut video production brief (2026-09-06)
 **Owners:** Wagner dos Santos (Principal, curator) · wgnr.ai SysOp (scaffold build) · WGNR Sounds label (operate)
 
 ## AI-Readable Block
 
-- **Scope:** Defines a Visual Production Layer for the label — 3 new project agent profiles (`video-director`, `video-engineer`, `video-coordinator`) + 2 skills (`velvut-visual-constitution`, `comfyui-video-pipeline`) — and a localized, audio-reactive, budget-safe video generation pipeline running on the Principal's Mac Studio M2 Ultra via ComfyUI and open-weights video models (LTX-Video / HunyuanVideo) on Apple Silicon MPS. First deliverable: Velvut's first music video for "Take Me Back". Scaffold work is executed by SysOp per the companion dev-ticket.
-- **Must-include elements:** (1) Velvut Visual Constitution (verbatim identity + visual rules from the Principal brief) as a protected, checkable spec; (2) Infrastructure Rule — cloud bypass, open-weights on MPS, Draft-First render gating (no hi-res cycle without low-res motion-vector preview + manual confirmation); (3) agent catalog with tiers/presets/parent departments; (4) 8-stage video production lifecycle; (5) open questions (BPM resolved 2026-09-06: 151, 4/4); (6) claim labels (VERIFIED-FACT / SYNTHESIS-JUDGMENT / UNVERIFIED-CLAIM).
+- **Scope:** Defines a Visual Production Layer for the label — 3 new project agent profiles (`video-director`, `video-engineer`, `video-coordinator`) + 2 skills (`velvut-visual-constitution`, `comfyui-video-pipeline`) — and a localized, audio-reactive, budget-safe video generation pipeline running on the Principal's Mac Studio M2 Ultra via ComfyUI and open-weights video models (LTX-Video / HunyuanVideo) on Apple Silicon MPS. First deliverable: Velvut's first music video for "Is This How It Ends?" (Principal-declared 2026-09-13, video project; originally scoped as "Take Me Back"). Scaffold work is executed by SysOp per the companion dev-ticket.
+- **Must-include elements:** (1) Velvut Visual Constitution (verbatim identity + visual rules from the Principal brief) as a protected, checkable spec; (2) Infrastructure Rule — cloud bypass, open-weights on MPS, Draft-First render gating (no hi-res cycle without low-res motion-vector preview + manual confirmation); (3) agent catalog with tiers/presets/parent departments; (4) 8-stage video production lifecycle; (5) open questions (video-project tempo AUTHORITATIVE 2026-09-14: "Is This How It Ends?" — 107 BPM, 4/4; supersedes the 2026-09-13 148 declaration and the 2026-09-06 "Take Me Back" @ 151); (6) claim labels (VERIFIED-FACT / SYNTHESIS-JUDGMENT / UNVERIFIED-CLAIM).
 - **Must-not-compress lists:** Visual Constitution rules (lighting, fog, silhouette bounds, performance control); Infrastructure Rule (cloud bypass + draft-first gate); agent-to-department mapping.
-- **Counter-prompt:** After summarizing, verify: (1) Are all Visual Constitution rules present verbatim? (2) Is the Draft-First gate stated as a hard prohibition, not a preference? (3) Are all 3 agents and 2 skills enumerated with tiers? (4) Is the BPM stated as 151 in 4/4 with its Principal-declaration source? (5) Are cloud video tools listed under out-of-scope?
+- **Counter-prompt:** After summarizing, verify: (1) Are all Visual Constitution rules present verbatim? (2) Is the Draft-First gate stated as a hard prohibition, not a preference? (3) Are all 3 agents and 2 skills enumerated with tiers? (4) Is the BPM stated as 107 in 4/4 for "Is This How It Ends?" with its ruling source (Principal ruling 2026-09-14 — 148 marked historical)? (5) Are cloud video tools listed under out-of-scope?
 
 ## 1. TL;DR
 
-Velvut needs its first music video ("Take Me Back") and the label has no video-production capability. Cloud generation is ruled out — the Principal spent hundreds of dollars on Runway with no final result (Principal-reported, 2026-09-06). This PRD contracts a Visual Production Layer for the label: three new agent profiles and two skills that run a fully local, audio-reactive video pipeline on the Principal's Mac Studio M2 Ultra — ComfyUI (VERIFIED-FACT: running at `/Users/wgnr/AI/comfyui/`, process check 2026-09-06) driving open-weights video models (LTX-Video / HunyuanVideo) on Apple Silicon MPS, finished with ffmpeg. Every render cycle obeys a Draft-First gate: low-res motion-vector preview, manual Principal confirmation, then hi-res. The Velvut Visual Constitution (red-backlight-only, fog, crushed blacks, grain, zero-facial-detail silhouettes, BPM-matched movement) is protected in code logic and per-render checks. SysOp scaffolds the team per the companion dev-ticket; the label operates it.
+Velvut needs its first music video — now "Is This How It Ends?" (video-project track re-bind, Principal-declared 2026-09-13; originally scoped as "Take Me Back", 2026-09-06) — and the label has no video-production capability. Cloud generation is ruled out — the Principal spent hundreds of dollars on Runway with no final result (Principal-reported, 2026-09-06). This PRD contracts a Visual Production Layer for the label: three new agent profiles and two skills that run a fully local, audio-reactive video pipeline on the Principal's Mac Studio M2 Ultra — ComfyUI (VERIFIED-FACT: running at `/Users/wgnr/AI/comfyui/`, process check 2026-09-06) driving open-weights video models (LTX-Video / HunyuanVideo) on Apple Silicon MPS, finished with ffmpeg. Every render cycle obeys a Draft-First gate: low-res motion-vector preview, manual Principal confirmation, then hi-res. The Velvut Visual Constitution (red-backlight-only, fog, crushed blacks, grain, zero-facial-detail silhouettes, BPM-matched movement) is protected in code logic and per-render checks. SysOp scaffolds the team per the companion dev-ticket; the label operates it.
 
 ## 2. Problem statement
 
@@ -29,10 +29,10 @@ Velvut needs its first music video ("Take Me Back") and the label has no video-p
 ### Goals
 1. Scaffold 3 project agents + 2 skills (SysOp build, label operate) forming a Visual Production Layer parallel to the Creative Production Layer (PRD-wgnr-sounds-label.md §13).
 2. Local open-weights video generation on Apple Silicon MPS via ComfyUI; zero cloud video spend.
-3. Audio-reactive pipeline synced to the track's BPM (151 BPM, 4/4 — Principal-declared 2026-09-06).
+3. Audio-reactive pipeline synced to the track's BPM ("Is This How It Ends?" — 107 BPM, 4/4 — tempo superseded per Principal ruling 2026-09-14 — 148 marked historical; 107 BPM confirmed by canonical MIDI export (flat 107.0), stems curve (104.79–109.83, avg ≈107), and Principal authorization).
 4. Draft-First gating as a hard rule: fast low-res motion-vector preview before any hi-res processing cycle; manual confirmation required.
 5. Velvut Visual Constitution enforced in code logic and checked per render cycle.
-6. First deliverable: Velvut "Take Me Back" music video assets.
+6. First deliverable: Velvut "Is This How It Ends?" music video assets (track re-bind, Principal-declared 2026-09-13, video project).
 
 ### Non-goals (v1.0.0)
 - Any cloud video-generation service (Runway et al.) — out of scope permanently unless the Principal reverses.
@@ -47,8 +47,9 @@ A Visual Production Layer — NOT a new label department. It sits beside the Cre
 ## 5. Velvut Visual Constitution (verbatim from Principal brief — protected)
 
 **Sonic identity (for audio-reactive mapping):**
-- Project track: "Take Me Back" — 151 BPM, 4/4 time (Principal-declared 2026-09-06). Heavy post-alternative/nu-metal edge.
-- Dynamics: heavy quiet-loud contrasts; verse = low, deep baritone vocal over driving tom-tom beats; chorus = massive walls of distorted power chords and anthemic hooks.
+- Project track: "Is This How It Ends?" — **107 BPM, 4/4** (~560.7 ms/beat, ~2.2430 s/bar) — tempo superseded per Principal ruling 2026-09-14 — 148 marked historical; 107 BPM confirmed by canonical MIDI export (flat 107.0), stems curve (104.79–109.83, avg ≈107), and Principal authorization. House identity: nu-metal and alt-rock (Principal ruling 2026-09-12).
+- Dynamics: heavy quiet-loud contrasts; verse = quiet introspective — low, deep baritone vocal over driving tom-tom beats; chorus = massive walls of distorted power chords and anthemic question hooks.
+- (Re-bind note: previously pinned to "Take Me Back" @ 151 BPM, 2026-09-06; re-pinned 2026-09-13 under the Principal's liberty directive for the video project. All visual rules below are untouched.)
 
 **Aesthetic:** Grounded cinematic live-action look, high-contrast underexposed, crushed deep blacks, film grain.
 
@@ -98,7 +99,7 @@ A Visual Production Layer — NOT a new label department. It sits beside the Cre
 
 ## 10. Open questions (Principal to resolve)
 
-1. **BPM of "Take Me Back"** — RESOLVED 2026-09-06: **151 BPM, 4/4** (Principal-declared in session). Beat mapping and movement pacing are now derivable: 151 BPM → ~397 ms per beat, ~1.588 s per bar (4/4).
+1. **Video-project track tempo** — RESOLVED 2026-09-14: **"Is This How It Ends?" — 107 BPM, 4/4** (~560.7 ms/beat, ~2.2430 s/bar) — tempo superseded per Principal ruling 2026-09-14 — 148 marked historical; 107 BPM confirmed by canonical MIDI export (flat 107.0), stems curve (104.79–109.83, avg ≈107), and Principal authorization. Onset verification against the master audio remains REQUIRED before render timing (validates the 107 grid + maps section boundaries; beatmap-generator.py gate). (Historical: 148 Principal-declared 2026-09-13 — superseded 2026-09-14; "Take Me Back" @ 151, 2026-09-06.)
 2. **Deliverable shape** — full-track music video, vertical clip series (TikTok/Reels), or both; runtime targets per format.
 3. **Render envelope on the Mac Studio** — acceptable session length / overnight batches; disk budget for drafts + finals.
 4. **Model lock** — LTX-Video vs HunyuanVideo (or both): decide after the on-host MPS probe (UNVERIFIED-CLAIM until then).
@@ -113,7 +114,7 @@ Cloud video services; live-action production; audio/Suno pipeline changes; Distr
 - Principal video production brief (session 2026-09-06) — source of §5 and §6.
 - `prds/PRD-wgnr-sounds-label.md` — §5.4 Suno role matrix, §13 Creative Production Layer pattern.
 - Vault: `/a0/usr/obsidian/03-wgnr-sounds/10-music/velvut/promotions/Google Ideas.md` — rebrand rollout + ffmpeg stitch flow.
-- Vault: `/a0/usr/obsidian/03-wgnr-sounds/10-music/velvut/lyrics/take-me-back.md` — track lyrics.
+- Vault: `/a0/usr/obsidian/03-wgnr-sounds/10-music/velvut/lyrics/` — track lyrics (video-project track: "Is This How It Ends?"; lyric file on file per the vault songbook).
 - ComfyUI: `/Users/wgnr/AI/comfyui/` (VERIFIED-FACT 2026-09-06).
 - Companion SysOp ticket: `/a0/usr/projects/wgnr_ai_sysop/dev-tickets/dev-ticket-2026-09-06-wgnr-sounds-video-team-scaffold.md`.
 - SysOp build PRD (SysOp-side build contract for this scaffold): `/a0/usr/projects/wgnr_ai_sysop/prds/PRD-wgnr-sounds-video-team-scaffold.md`. This label PRD remains the authoritative domain spec.
@@ -123,6 +124,8 @@ Cloud video services; live-action production; audio/Suno pipeline changes; Distr
 - [x] PRD filed in `prds/` per naming contract
 - [x] `prds/AGENTS.md` Child DOX Index row added
 - [x] SysOp scaffold dev-ticket filed
-- [ ] At scaffold time (SysOp): `.a0proj/agents/AGENTS.md` Visual Production Layer section + `agents.json` + Child DOX Index
-- [ ] At scaffold time: skills under `.a0proj/skills/` per §8
-- [ ] MPS probe results appended (Open Question 4)
+- [x] At scaffold time (SysOp): `.a0proj/agents/AGENTS.md` Visual Production Layer section + `agents.json` + Child DOX Index (done 2026-09-09; skills index + CHANGELOG updated)
+- [x] At scaffold time: skills under `.a0proj/skills/` per §8 (done 2026-09-09; Draft-First gate GATE-1–GATE-6 + Constitution C1–C10 embedded as explicit gate steps)
+- [x] MPS probe results appended (Open Question 4) — DONE 2026-09-09 00:38 ET via SysOp host-bridge probe: torch 2.11.0 MPS available=True; HunyuanVideo 1.5 720p t2v fp16 model PRESENT locally; LTX-Video ABSENT (download needed if chosen); custom_nodes lacks video helper nodes (install needed before first render). Model lock can now proceed on evidence; Draft-First gate governs first low-res preview.
+- [x] v1.1.0 amendment (2026-09-13) — video-project track re-bind: "Is This How It Ends?" @ 148 BPM, 4/4 (Principal-declared 2026-09-13, video project; liberty directive) supersedes "Take Me Back" @ 151 (2026-09-06). Minimal substitution in §5 sonic identity — all verbatim visual rules untouched; §1 TL;DR, Goals #3/#6, §10 OQ1, §12 references updated; skills `velvut-visual-constitution` (§2 sonic identity, C9 parenthetical, §5 anchoring) + `comfyui-video-pipeline` (§5 constants, §7 naming tree) re-pinned to 148 / 405.4 ms / 1.6216 s. Onset verification elevated to REQUIRED gate (no prior documented tempo for the new track).
+- [x] v1.1.1 amendment (2026-09-14) — video-grid tempo supersession: **107 BPM, 4/4** (~560.7 ms/beat, ~2.2430 s/bar) — tempo superseded per Principal ruling 2026-09-14 — 148 (declared 2026-09-13) marked historical; 107 confirmed by canonical MIDI export (flat 107.0) and stems curve (104.79–109.83, avg ≈107). §5 sonic identity, Goal #3, §10 OQ1, AI-Readable Block re-pinned — all verbatim visual rules untouched. beatmap.json already on the canonical 107 grid (369 beats / 93 bars); onset gate stays REQUIRED (validates the 107 grid + maps sections).

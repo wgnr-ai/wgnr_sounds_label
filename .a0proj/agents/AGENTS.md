@@ -56,6 +56,16 @@ The Captain auto-selects for new chats in this project via `.a0proj/default_agen
 
 The 3 creative agents are NOT label departments — they form a separate **Creative Production Layer** that operates upstream of the label's release pipeline. Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (Suno-ready prompts). The `suno-prompt-compatibility-spec` skill is the canonical Suno format reference for `suno-prompter` (mandatory before emission). Cross-reference: PRD §13 (Creative Song-Production Layer, v3.0.0).
 
+## Visual Production Layer (v4.0.0)
+
+| Slug | Title | Model tier | Preset | Parent dept (subfunction) |
+|---|---|---|---|---|
+| `video-director` | Video Director (Treatment & Vision) | judgment | Default Coding and Reasoning | Marketing & Promotion (visual-creative) |
+| `video-engineer` | Video Engineer (ComfyUI Pipeline) | precision | Default Coding and Reasoning | Studio (video-engineering) |
+| `video-coordinator` | Video Coordinator (Render Ops & Delivery) | execution | Fast Sub-Agent Inference | Operations / Label Management (render-ops) |
+
+The 3 video agents form a separate **Visual Production Layer** (NOT an 11th department), parallel to the Creative Production Layer. It consumes finished songs upstream and hands packaged video assets to Marketing & Promotion and Distribution & Digital Strategy downstream. Hard rules binding on all three: the **Draft-First gate** (hi-res render cycles FORBIDDEN until a low-res motion-vector preview is manually confirmed by the Principal), the **Velvut Visual Constitution** (per-artist, enforced via the `velvut-visual-constitution` skill), and the **cloud prohibition** (Runway et al. permanently out of scope — Principal direction 2026-09-06). Pipeline runbook: `comfyui-video-pipeline` skill (ComfyUI at `/Users/wgnr/AI/comfyui/`, open-weights models on Apple Silicon MPS, ffmpeg finishing). Cross-reference: `prds/PRD-wgnr-sounds-video-production.md` §4/§7 (Visual Production Layer, v4.0.0). First deliverable: Velvut "Is This How It Ends?" music video (107 BPM, 4/4 — tempo superseded per Principal ruling 2026-09-14; 148 historical).
+
 ## Child DOX Index
 
 | Path | Scope |
@@ -74,6 +84,9 @@ The 3 creative agents are NOT label departments — they form a separate **Creat
 | `.a0proj/agents/song-architect/` | Song Architect — Creative Production Layer (v3.0.0). Develops the song idea — concept, structure, arrangement, genre/mood/tempo blueprint. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint. Upstream of `lyricist` and `suno-prompter`. Department affiliation: A&R (song-concept subfunction). |
 | `.a0proj/agents/lyricist/` | Lyricist — Creative Production Layer (v3.0.0). Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header. Department affiliation: Studio (creative-writing subfunction). |
 | `.a0proj/agents/suno-prompter/` | Suno Prompter — Creative Production Layer (v3.0.0). Translates the song blueprint + finished lyrics into verified Suno-compatible prompts. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure. Skill: `suno-prompt-compatibility-spec` is mandatory before emission. Department affiliation: Distribution & Digital Strategy (Suno export subfunction). |
+| `.a0proj/agents/video-director/` | Video Director — Visual Production Layer (v4.0.0). Central vision-holder per artist (Velvut first): treatment, storyboard, shot list, Constitution enforcement at review gates, draft-preview judgment recommendations to the Principal. Department affiliation: Marketing & Promotion (visual-creative subfunction). Skills: `velvut-visual-constitution`, `comfyui-video-pipeline`. |
+| `.a0proj/agents/video-engineer/` | Video Engineer — Visual Production Layer (v4.0.0). ComfyUI workflow graphs, open-weights model ops on Apple Silicon MPS, Draft-First render ladder implementation, audio-reactive beat mapping (107 BPM, 4/4 — "Is This How It Ends?", tempo superseded per Principal ruling 2026-09-14; 148 historical), ffmpeg stitch + finishing. Department affiliation: Studio (video-engineering subfunction). Skills: `velvut-visual-constitution`, `comfyui-video-pipeline`. |
+| `.a0proj/agents/video-coordinator/` | Video Coordinator — Visual Production Layer (v4.0.0). Render-queue ops, asset naming + version tracking, Draft-First gate logging, disk hygiene, delivery packaging per platform specs (YouTube 16:9, TikTok/Reels 9:16). Department affiliation: Operations / Label Management (render-ops subfunction). Skill: `comfyui-video-pipeline`. |
 
 ## Conventions
 
@@ -83,6 +96,7 @@ The 3 creative agents are NOT label departments — they form a separate **Creat
 
 ## Verification
 
-- `ls .a0proj/agents/` returns 10 directories (ar, marketing, distribution, publicity, legal, royalties, studio, artist-relations, sync, operations).
-- Each directory contains `agent.yaml`, `_context.md`, `prompts/agent.system.main.role.md`, `plugins/_model_config/config.json`, `plugins/_tool_access/config.json`, `plugins/_skills/config.json`.
-- `.a0proj/agents.json` registers all 10 with slug + title + model_tier + profile_type.
+- `ls .a0proj/agents/` returns 17 directories (10 departments + wgnr-sounds-captain + 3 Creative Production Layer + 3 Visual Production Layer).
+- Each directory contains `agent.yaml`, `_context.md`, `prompts/agent.system.main.role.md`, `plugins/_model_config/config.json`, `plugins/_tool_access/config.json`, `plugins/_skills/config.json` (captain also carries `assets/`).
+- `.a0proj/agents.json` registers all 17 with slug + title + model_tier + profile_type.
+- `.a0proj/scripts/validate_agent_yamls.py` exits 0 (all agent.yaml parse).

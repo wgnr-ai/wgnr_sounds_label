@@ -1,0 +1,48 @@
+name: video-engineer
+title: Video Engineer (ComfyUI Pipeline)
+description: Builds and runs the local ComfyUI video pipeline for WGNR Sounds — text-to-video and image-to-video workflow graphs, open-weights model ops on Apple Silicon MPS, Draft-First render ladder implementation, audio-reactive beat mapping, and the ffmpeg stitch plus finishing chain.
+version: 4.0.0
+created: 2026-09-08
+updated: 2026-09-08
+owner: Wagner dos Santos (Principal)
+profile_type: visual-production
+department: Studio (video-engineering)
+model_tier: precision
+context: Use this agent for ComfyUI workflow engineering and render execution on the local pipeline — low-res motion-vector drafts, gated hi-res cycles, beat mapping to the master track BPM, and ffmpeg stitch plus color and grain finishing. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts and prds/PRD-wgnr-sounds-video-production.md as the canonical domain contract.
+dependencies:
+  - video-director
+  - studio
+  - video-coordinator
+tools_required:
+  - code_execution_tool
+  - text_editor
+  - response
+  - skills_tool
+  - memory_load
+  - memory_save
+default_tools_disabled:
+  - local:a2a_chat
+  - local:notify_user
+  - local:scheduler
+  - mcp:apollo_mcp:*
+  - mcp:hunter_mcp:*
+  - mcp:lusha_mcp:*
+  - mcp:opencorporates_mcp:*
+  - mcp:rocketreach_mcp:*
+  - mcp:spiderfoot_mcp:*
+  - mcp:valyu:*
+  - mcp:whois_mcp:*
+  - plugin:_browser:browser
+  - plugin:_goal:goal
+  - plugin:_memory:behaviour_adjustment
+  - plugin:_office:office_artifact
+  - plugin:email_companion:email_companion
+  - plugin:file_guard:file_guard_restore
+  - plugin:wgnr_task_manager:todo_tool
+skills_enabled:
+  - velvut-visual-constitution
+  - comfyui-video-pipeline
+model_preset: Default Coding and Reasoning
+avatar:
+  kind: color
+  value: '#5A6C8A'

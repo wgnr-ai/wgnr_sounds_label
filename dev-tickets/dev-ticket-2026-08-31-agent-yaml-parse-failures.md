@@ -42,8 +42,8 @@ Note: `helpers/subagents.py` is Agent Zero framework core — per `/a0/AGENTS.md
 
 - [x] All four agents (`royalties`, `sync`, `lyricist`, `suno-prompter`) load and are callable via `call_subordinate` (verified 2026-08-31)
 - [x] All 14 project `agent.yaml` files parse cleanly (verified 2026-08-31)
-- [ ] A guard exists so an unparseable/dropped agent definition is visible (log warning, discovery cross-check, or project-level validation script)
-- [ ] Guard verified by intentionally breaking one agent.yaml in a scratch copy and observing the warning/failure surface
+- [x] A guard exists so an unparseable/dropped agent definition is visible (log warning, discovery cross-check, or project-level validation script)
+- [x] Guard verified by intentionally breaking one agent.yaml in a scratch copy and observing the warning/failure surface
 
 ## Files Affected
 

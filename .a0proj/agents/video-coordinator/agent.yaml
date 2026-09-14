@@ -1,0 +1,48 @@
+name: video-coordinator
+title: Video Coordinator (Render Ops & Delivery)
+description: Runs render-queue operations for the WGNR Sounds video pipeline — asset naming and version tracking, Draft-First gate logging, disk hygiene on the Mac Studio, and delivery packaging per platform specs (YouTube 16:9, TikTok and Reels 9:16).
+version: 4.0.0
+created: 2026-09-08
+updated: 2026-09-08
+owner: Wagner dos Santos (Principal)
+profile_type: visual-production
+department: Operations / Label Management (render-ops)
+model_tier: execution
+context: Use this agent for video render-queue operations and delivery packaging — gate log records of which drafts were confirmed by whom and when, asset naming and version tracking, disk hygiene, and platform-spec deliverables. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts and prds/PRD-wgnr-sounds-video-production.md as the canonical domain contract.
+dependencies:
+  - video-director
+  - video-engineer
+  - operations
+  - distribution
+tools_required:
+  - code_execution_tool
+  - text_editor
+  - response
+  - skills_tool
+  - memory_load
+  - memory_save
+default_tools_disabled:
+  - local:a2a_chat
+  - local:notify_user
+  - local:scheduler
+  - mcp:apollo_mcp:*
+  - mcp:hunter_mcp:*
+  - mcp:lusha_mcp:*
+  - mcp:opencorporates_mcp:*
+  - mcp:rocketreach_mcp:*
+  - mcp:spiderfoot_mcp:*
+  - mcp:valyu:*
+  - mcp:whois_mcp:*
+  - plugin:_browser:browser
+  - plugin:_goal:goal
+  - plugin:_memory:behaviour_adjustment
+  - plugin:_office:office_artifact
+  - plugin:email_companion:email_companion
+  - plugin:file_guard:file_guard_restore
+  - plugin:wgnr_task_manager:todo_tool
+skills_enabled:
+  - comfyui-video-pipeline
+model_preset: Fast Sub-Agent Inference
+avatar:
+  kind: color
+  value: '#2A2D32'

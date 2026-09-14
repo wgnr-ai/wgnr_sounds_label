@@ -10,9 +10,9 @@ Human-facing documentation hub for the WGNR Sounds Record Label project — gove
 - Authored by: wgnr.ai Ops (orchestrator)
 - Curated by: Wagner dos Santos (Principal)
 
-## v1 status
+## Status
 
-This directory is intentionally a placeholder in v1. No documents ship yet.
+v1 shipped empty. As of 2026-09-13 the directory hosts its first operational tree: `video-pipeline/velvut/` — Velvut MIDI-driven audio-reactive ComfyUI pipeline artifacts (video-engineer). See the child AGENTS.md in that tree for its binding contracts (Draft-First gate, Visual Constitution C1–C10, fact-gated repo URLs).
 
 ## What will go here in v2
 
@@ -35,4 +35,6 @@ This directory is intentionally a placeholder in v1. No documents ship yet.
 
 ## Child DOX Index
 
-(none yet — v1 ships empty)
+| Path | Scope |
+|---|---|
+| `video-pipeline/velvut/` | Velvut MIDI-driven audio-reactive ComfyUI pipeline artifacts + child AGENTS.md (added 2026-09-13) |

@@ -1,0 +1,16 @@
+{
+ "best_flat": {
+  "bpm": 105.95,
+  "offset_s": 3.0,
+  "median_err_ms": 36.5,
+  "coverage": 0.69
+ },
+ "best_curve": {
+  "offset_s": 0.06,
+  "median_err_ms": 7.6,
+  "coverage": 0.909
+ },
+ "n_onsets": 1066,
+ "audio_len_s": 208.76,
+ "verdict": "CURVE_WINS"
+}

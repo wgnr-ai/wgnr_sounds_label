@@ -1,0 +1,188 @@
+{
+  "_GATE1_README": {
+    "class_type": "_META_NOT_A_NODE",
+    "note": "GATE-1 DRAFT GRAPH — Draft-First (PRD-wgnr-sounds-video-production.md §6, verbatim): high-resolution processing cycles are FORBIDDEN until a fast, low-res motion-vector preview is delivered and manually confirmed by the Principal. This file contains ONLY draft-envelope parameters. Hi-res parameters are not set, queued, or stored here; the hi-res graph is authored only after video-coordinator logs the GATE-4 gate confirmation. PLACEHOLDER class_types are finalized at deploy (host access pending). No cloud video-generation services — ever.",
+    "naming": "velvut/is-this-how-it-ends/sh-NN/vN-<stage> — no overwrites; drafts clearly labeled; never mixed into finals"
+  },
+  "1": {
+    "class_type": "MIDI_Load_PLACEHOLDER",
+    "inputs": {
+      "midi_file": "velvut/is-this-how-it-ends/master.mid"
+    },
+    "_meta": {
+      "title": "GATE-1 DRAFT // Load MIDI (.mid PENDING from Principal). REPLACE class_type with the installed RyanOnTheInside MIDI node — pinned default reader (Principal-overridable, see deploy-custom-nodes.sh). AudioReactor handles audio-frame onset cross-verification, not MIDI loading."
+    }
+  },
+  "2": {
+    "class_type": "MIDI_TrackExtract_PLACEHOLDER",
+    "inputs": {
+      "midi": ["1", 0],
+      "track_index": 0,
+      "role": "drums-snare-toms"
+    },
+    "_meta": {
+      "title": "Drum/snare/tom-tom track. track_index is an ASSUMPTION (GM ch10 convention) — UNCONFIRMED until the .mid arrives; verify before pinning."
+    }
+  },
+  "3": {
+    "class_type": "MIDI_TrackExtract_PLACEHOLDER",
+    "inputs": {
+      "midi": ["1", 0],
+      "track_index": 1,
+      "role": "guitar-bass"
+    },
+    "_meta": {
+      "title": "Guitar/bass track (palm-muted downstrokes). track_index UNCONFIRMED until the .mid arrives."
+    }
+  },
+  "4": {
+    "class_type": "FizzNodes_FloatConvert_PLACEHOLDER",
+    "inputs": {
+      "midi_track": ["2", 0]
+    },
+    "_meta": {
+      "title": "Downbeat spikes: note-on velocity/127.0 -> value spike on every hit, else 0.0. Output channel: drums_velocity_spikes. MAP to the exact FizzNodes float-conversion math node at deploy."
+    }
+  },
+  "5": {
+    "class_type": "FizzNodes_ValueTrack_PLACEHOLDER",
+    "inputs": {
+      "midi_track": ["3", 0]
+    },
+    "_meta": {
+      "title": "Guitar velocity tracking: note-on/off pairs -> palm-muted downstroke hold-duration floats 0..1. Output channel: guitar_velocity_tracking. MAP to exact FizzNodes value-tracking node at deploy."
+    }
+  },
+  "6": {
+    "class_type": "FizzNodes_ValueSchedule_PLACEHOLDER",
+    "inputs": {
+      "spikes": ["4", 0],
+      "peak": 1.0,
+      "decay_to_zero": 0.0,
+      "decay_half_beat": true
+    },
+    "_meta": {
+      "title": "STROBE CONTROLLER (math-expressions.md section a): outputs 1.0 on note hits, rapid drop to 0.0 on silence. Drives RED backlight intensity ONLY — Constitution C1: white light is STRIPPED from the brief and must NEVER be reintroduced."
+    }
+  },
+  "7": {
+    "class_type": "FizzNodes_Math_PLACEHOLDER",
+    "inputs": {
+      "guitar_velocity": ["5", 0],
+      "intensity_floor": 0.15,
+      "intensity_ceil": 0.85,
+      "bucket_floor": 32,
+      "bucket_ceil": 192
+    },
+    "_meta": {
+      "title": "MOTION VECTOR DRIVER (math-expressions.md section b): velocity -> motion scaling with HARD clamp — intensity_ceil 0.85 / bucket_ceil 192 so max velocity mathematically CANNOT yield flailing (Constitution C6); sharp controlled slams only (C7 stance, C8 no headbanging)."
+    }
+  },
+  "8": {
+    "class_type": "StrobeIntensityApply_PLACEHOLDER",
+    "inputs": {
+      "strobe_float": ["6", 0],
+      "conditioning": ["10", 0]
+    },
+    "_meta": {
+      "title": "Applies the strobe envelope to the RED backlight conditioning of the active positive channel. Single consumer of node 6 (C1 auditability). Wire per installed node set at deploy."
+    }
+  },
+  "9": {
+    "class_type": "MotionDriveApply_PLACEHOLDER",
+    "inputs": {
+      "motion_float": ["7", 0],
+      "video_model": ["15", 0]
+    },
+    "_meta": {
+      "title": "Feeds motion_bucket_id / motion_intensity of the video-model node — exact field name depends on the swapped model (LTX-style vs Hunyuan-style). Model stays SWAPPABLE until the MPS probe decision (PRD Open Question 4; HunyuanVideo 1.5 PRESENT locally, LTX-Video ABSENT — probe 2026-09-09)."
+    }
+  },
+  "10": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["14", 0],
+      "text": "Grounded cinematic live-action music video, 16:9, close-up on a sleek black matte solid-body electric guitar, sharp clean geometric edges, low-slung strap. An anonymous dark silhouette guitarist slamming heavy downstrokes. Crushed deep blacks, underexposed, blinding hot red backlight bleeding through dense volumetric fog, fine film grain, raw atmospheric depth."
+    },
+    "_meta": {
+      "title": "Positive — GUITARIST channel (VERBATIM per prompt-channels.md — DO NOT EDIT). Example-wired channel; swap nodes 10/11/12 per shot."
+    }
+  },
+  "11": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["14", 0],
+      "text": "Cinematic live-action rock video, high-contrast silhouette of a lean drummer seated behind a dark, customized minimalist drum kit, clean matte-black hardware shells, sleek cymbal rims catching light leaks. Heavy overhead stick strikes matching an intense, driving rhythm. Extreme backlighting, saturated red strobe atmosphere, thick swirling smoke, deep blacks."
+    },
+    "_meta": {
+      "title": "Positive — DRUMMER channel (VERBATIM per prompt-channels.md — DO NOT EDIT)."
+    }
+  },
+  "12": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["14", 0],
+      "text": "High-contrast digital cinema footage, pure black silhouette of a broad bassist, heavy solid-body bass guitar slung extremely low, sleek chrome pickups catching a sharp rim-light reflection. Slow, controlled rhythmic weight shifts in dense fog. Pitch black background punctured by a blinding red strobe beam, raw color science, fine grain."
+    },
+    "_meta": {
+      "title": "Positive — BASSIST channel (VERBATIM per prompt-channels.md — DO NOT EDIT)."
+    }
+  },
+  "13": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["14", 0],
+      "text": "facial features, visible face, eyes, mouth, front lighting, white lights, other-color lights, headbanging, wild flailing movement, cartoonish motion, bright exposure"
+    },
+    "_meta": {
+      "title": "MANDATORY NEGATIVE — shared by EVERY channel (prompt-channels.md). 'white lights' enforces Constitution C1 at generation time."
+    }
+  },
+  "14": {
+    "class_type": "CLIPLoader_PLACEHOLDER",
+    "inputs": {
+      "clip_name": "SET_AT_DEPLOY"
+    },
+    "_meta": {
+      "title": "CLIP loader for the active video model — finalize at deploy together with node 15 (same model pack)."
+    }
+  },
+  "15": {
+    "class_type": "VideoModel_PLACEHOLDER",
+    "inputs": {},
+    "_meta": {
+      "title": "SWAPPABLE VIDEO-MODEL NODE — open weights only, local MPS (Mac Studio M2 Ultra). Set concrete class_type at deploy per the MPS probe (HunyuanVideo 1.5 PRESENT; LTX-Video ABSENT — probe 2026-09-09). t2v or i2v per shot silhouette strategy (PRD Open Question 5). NEVER a cloud service."
+    }
+  },
+  "16": {
+    "class_type": "VideoSample_PLACEHOLDER",
+    "inputs": {
+      "model": ["15", 0],
+      "positive": ["8", 0],
+      "negative": ["13", 0],
+      "motion_bucket_id": ["9", 0],
+      "width": 320,
+      "height": 180,
+      "frames": 49,
+      "fps": 24,
+      "steps": 6,
+      "cfg": 7.0,
+      "sampler_name": "euler",
+      "scheduler": "normal"
+    },
+    "_meta": {
+      "title": "GATE-1 DRAFT SAMPLER — the ONLY resolution/length/step values permitted in this file: 320x180 (16:9 low-res), 49 frames (~2.0 s preview-length motion @24 fps, ~0.9 bar at 107 BPM), 6 steps. Hi-res parameters are FORBIDDEN here (Draft-First, PRD §6); the hi-res graph is authored only after the GATE-4 gate-log record exists."
+    }
+  },
+  "17": {
+    "class_type": "VideoSave_PLACEHOLDER",
+    "inputs": {
+      "video": ["16", 0],
+      "subfolder": "velvut/is-this-how-it-ends/sh-01",
+      "filename_prefix": "v1-draft"
+    },
+    "_meta": {
+      "title": "DRAFT output — versioned tree velvut/is-this-how-it-ends/sh-NN/vN-<stage> (video-coordinator owns the tree; no overwrites; DRAFT-labeled; never mixed into finals)."
+    }
+  }
+}
