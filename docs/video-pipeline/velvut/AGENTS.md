@@ -4,6 +4,8 @@
 
 Deploy-ready artifact set for the Velvut MIDI-driven audio-reactive ComfyUI pipeline (Mac Studio M2 Ultra, MPS). Authored 2026-09-13 by `video-engineer`; re-bound 2026-09-13 to **"Is This How It Ends?"** @ 107 BPM, 4/4 (tempo superseded per Principal ruling 2026-09-14 — 148 historical). Host DEPLOY EXECUTED 2026-09-13: 4 node packs live in the nested core, server relaunched via launchd.
 
+> **PROJECT CLOSED 2026-09-15** (Principal decision, PRD v1.2.0): the video production project is CANCELLED. This tree is preserved as a recoverable archive — all artifacts remain valid references (pipeline specs, re-timed `master.mid`, labeled `beatmap.json` with the verified accelerating tempo curve, conditioning packages). Mac-side drafts remain at `output/velvut/is-this-how-it-ends/sh-01/`. Any future revival starts from these assets, not from zero.
+
 ## Ownership
 
 - Authored/updated by: `video-engineer` (ComfyUI pipeline artifacts).
