@@ -28,6 +28,7 @@ Deploy-ready artifact set for the Velvut MIDI-driven audio-reactive ComfyUI pipe
 | `prompt-channels.md` | Verbatim brief conditioning channels + mandatory negative block (track-agnostic) |
 | `beatmap-generator.py` | BPM-parameterized beat/bar map generator (TRACK_BPM = 107.0, authoritative); REQUIRED onset-verification gate (validates the 107 grid + maps section boundaries) |
 | `draft-workflow.json` | GATE-1 draft graph (low-res, preview-length, swappable video-model node) |
+| `sh-01-v3-conditioning-package.md` | SH-01 v3 conditioning + **v4 framing amendment** (video-director, 2026-09-14): i2v-with-composed-keyframe RULING (probe-gated; t2v fallback), verbatim-base + structural anchor blocks, strengthened negatives, keyframe still spec; v4 post-GATE-3: wide-framing override (wired first, wins the base's close-up line), close-up reclassified to B-roll inserts, instrument-identifiability C5 criterion — design only, wiring by video-engineer |
 
 ## Verification
 

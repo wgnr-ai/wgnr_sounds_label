@@ -19,74 +19,75 @@
   {
    "section": 1,
    "start_s": 0.0,
-   "end_s": 9.52,
-   "start_bar": 1,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "end_s": 9.5,
+   "label": "Instrumental Intro",
+   "dynamics": "quiet/ambient (inferred)",
+   "motion_ceil": 0.55,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 2,
-   "start_s": 9.52,
-   "end_s": 27.214,
-   "start_bar": 5,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 9.5,
+   "end_s": 27.2,
+   "label": "First Verse",
+   "dynamics": "quiet (house convention)",
+   "motion_ceil": 0.6,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 3,
-   "start_s": 27.214,
-   "end_s": 45.511,
-   "start_bar": 13,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 27.2,
+   "end_s": 45.5,
+   "label": "End of Verse to Chorus",
+   "dynamics": "BUILD \u2014 rising intensity",
+   "motion_ceil": 0.75,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 4,
-   "start_s": 45.511,
-   "end_s": 90.929,
-   "start_bar": 21,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 45.5,
+   "end_s": 90.9,
+   "label": "Second Verse",
+   "dynamics": "quiet (NOTE: 45.4s window \u2014 may contain 2nd chorus; flagged for Principal ear)",
+   "motion_ceil": 0.65,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 5,
-   "start_s": 90.929,
-   "end_s": 109.784,
-   "start_bar": 41,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 90.9,
+   "end_s": 109.8,
+   "label": "Chorus to Break",
+   "dynamics": "loud chorus energy into break",
+   "motion_ceil": 0.85,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 6,
-   "start_s": 109.784,
-   "end_s": 153.693,
-   "start_bar": 49,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 109.8,
+   "end_s": 153.7,
+   "label": "Bridge",
+   "dynamics": "mid (character unconfirmed \u2014 flagged)",
+   "motion_ceil": 0.7,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 7,
-   "start_s": 153.693,
-   "end_s": 179.722,
-   "start_bar": 69,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "start_s": 153.7,
+   "end_s": 179.7,
+   "label": "Chorus",
+   "dynamics": "loud \u2014 wall of sound",
+   "motion_ceil": 0.85,
+   "confirmed_by": "Principal 2026-09-14"
   },
   {
    "section": 8,
-   "start_s": 179.722,
-   "end_s": 195.512,
-   "start_bar": 81,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
-  },
-  {
-   "section": 9,
-   "start_s": 195.512,
+   "start_s": 179.7,
    "end_s": 208.727,
-   "start_bar": 88,
-   "label": "UNLABELED \u2014 Principal to name",
-   "confirmed": false
+   "label": "Final Chorus Lines (\"Is This How It Ends?\" x2)",
+   "dynamics": "loud \u2014 title question twice",
+   "motion_ceil": 0.85,
+   "confirmed_by": "Principal 2026-09-14",
+   "internal_subsplit_s": 195.5
   }
  ],
  "beats": [
@@ -3173,5 +3174,15 @@
    "start_s": 208.727,
    "end_s": 208.727
   }
- ]
+ ],
+ "section_labels_confirmed": "2026-09-14 (Principal, in-chat) \u2014 8 labels over 9 onset windows; final label spans last two windows (sub-split 195.5s)",
+ "onset_verified": true,
+ "onset_evidence": {
+  "status": "PASS",
+  "coverage": 0.909,
+  "median_err_ms": 7.6,
+  "offset_s": 0.06,
+  "method": "spectral-flux, 1066 onsets vs curve grid",
+  "detail_file": "onset-fit.json"
+ }
 }
