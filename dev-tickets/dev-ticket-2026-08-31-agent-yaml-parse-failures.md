@@ -1,9 +1,14 @@
 ---
 title: Four project agents silently dropped from callable profile list (agent.yaml parse failures)
-status: open
+status: resolved
+duplicate_of: /a0/usr/projects/wgnr_ai_sysop/dev-tickets/98-resolved-archived/dev-ticket-2026-09-06-agent-yaml-silent-drop-guard.md
 priority: P2
 created: 2026-08-31
 ---
+
+## Closure (2026-09-17, SysOp session)
+
+The remaining open work (framework-level guard) is delivered and code-verified in /a0/helpers/subagents.py: `_warn_undiscovered_project_agents` (L330-370) warns when a slug is registered in agents.json but its agent.yaml failed to parse and was skipped — the silent-drop class is closed. Authoritative resolution lives in the sysop framework ticket linked above (frontmatter status: resolved; its body table 'Open' is stale text). Data fixes from 2026-08-31 remain valid. No further action.
 
 ## Summary
 
