@@ -21,10 +21,10 @@ Canonical brand assets live in this project:
 
 ## Active roster
 
-| Artist | Suno role | Pipeline |
+| Artist | AI involvement | Pipeline |
 |---|---|---|
-| **Wágner** | Suno-assist only | Human-recorded → DistroKid → DSPs |
-| **Velvut** | Suno-assist only | Human-recorded → DistroKid → DSPs |
+| **Wágner** | None (100% human) | Human-recorded → DistroKid → DSPs |
+| **Velvut** | Ideation collaborator (brainstorming/developing ideas with co-writers; never generates recordings) | Human-recorded → DistroKid → DSPs |
 | **DJ Farra** | 100% AI-generated | Suno → DistroKid → DSPs |
 | **Sobralenses** | 100% AI-generated | Suno → DistroKid → DSPs |
 
@@ -32,7 +32,7 @@ The wgnrsounds.com website is out of date; the canonical roster is the union of 
 
 ## Historical catalog
 
-Beloved Entertainment Group (BEG, Nov 1995 – Jan 2002), NYC-based, 30+ album releases across four sub-imprints: Beloved Recordings (Compilations), Yum Recordings (Rock), Updego Entertainment (Dance / Electronic / Club), Beloved Soundtracks (Film / TV / Broadway). Strategic partnerships with Dinemec Records (Switzerland) and Crane Mountain Records (Boston). Legal status: fictitious name under wgnr.ai, LLC.
+Beloved Entertainment Group (BEG, Nov 1995 – Jan 2002), NYC-based, 30+ album releases across four sub-imprints: Beloved Recordings (Compilations), Yum Recordings (Rock), Updego Entertainment (Dance / Electronic / Club), Beloved Soundtracks (Film / TV / Broadway). Strategic partnerships with Dinemec Records (Switzerland) and Crane Mountain Records (Boston). Legal status: fictitious name under WGNR, LLC.
 
 ## Contents
 

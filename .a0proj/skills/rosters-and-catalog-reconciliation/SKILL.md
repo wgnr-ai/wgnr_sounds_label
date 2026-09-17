@@ -38,10 +38,10 @@ The WGNR Sounds roster and catalog live across multiple surfaces, each with a di
 
 ## Active Roster (PRD §6.1, canonical)
 
-| Artist | Suno role | Pipeline |
+| Artist | AI involvement | Pipeline |
 |---|---|---|
-| **Wágner** | Suno-assist only | Human-recorded → DistroKid → DSPs |
-| **Velvut** | Suno-assist only | Human-recorded → DistroKid → DSPs |
+| **Wágner** | None (100% human) | Human-recorded → DistroKid → DSPs |
+| **Velvut** | Ideation collaborator only (brainstorms ideas like a co-writer; never generates recordings) | Human-recorded → DistroKid → DSPs |
 | **DJ Farra** | 100% AI-generated | Suno → DistroKid → DSPs |
 | **Sobralenses** | 100% AI-generated | Suno → DistroKid → DSPs |
 

@@ -46,7 +46,7 @@ The Beloved Entertainment Group (BEG) is the **historical back-catalog** of WGNR
 
 ## Legal Status (current)
 
-BEG is currently filed as a **fictitious name under wgnr.ai, LLC** (per PRD §6.2, casing corrected from v1.1).
+BEG is currently filed as a **fictitious name under WGNR, LLC** (per PRD §6.2, casing corrected from v1.1).
 
 ## Migration Path: DSP Re-distribution (TBD)
 

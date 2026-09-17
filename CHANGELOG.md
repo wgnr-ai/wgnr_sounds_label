@@ -5,7 +5,7 @@ All notable changes to the WGNR Sounds Record Label project are documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] — 2026-09-06
+## [Unreleased] — 2026-09-15
 
 ### Added
 - Visual Production Layer scaffold complete (SysOp, 2026-09-09): 3 agent profiles (`video-director`, `video-engineer`, `video-coordinator`) under `.a0proj/agents/` + 2 skills (`velvut-visual-constitution`, `comfyui-video-pipeline`) under `.a0proj/skills/`; `agents.json` v4.0.0 (17 agents); `.a0proj/agents/AGENTS.md` Visual Production Layer section + Child DOX rows; skills index extended to 7. Draft-First gate (GATE-1–GATE-6) and Velvut Visual Constitution (C1–C10) embedded verbatim in skill logic. MPS compatibility probe DEFERRED — requires host-bridge session (see sysop dev-ticket note).
@@ -18,3 +18,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Bumped wOS conformance reference from v0.7 to v0.8 across 14 agent prompt files in `.a0proj/agents/`. Cross-project wOS propagation per sysop Task #2 — canonical wOS is v0.8 per `/a0/usr/plugins/wgnr_ai_os/prompts/wos-spec.promptinclude.md`.
+- README consistency fix per Principal rulings (2026-09-15): roster AI-involvement taxonomy corrected (Wágner: no AI; Velvut: Suno ideation collaborator only, never generator), legal entity string corrected to WGNR, LLC — aligned with sysop global knowledge identity docs. Sweep extended: correction applied to all agent `_context.md` roster tables, `beg-catalog-metadata` SKILL.md, and the PRD §6.2 current-status line; suno-prompter workflow vocabulary (PRD §5.4 "Suno-assist" term, which now mismatches Wágner's no-AI status) intentionally left for a PRD §5.4 revision.

@@ -51,10 +51,10 @@ Press releases; media lists; interview prep documents; coverage reports.
 
 ## Active Roster (canonical, per PRD §6.1)
 
-| Artist | Suno role | Pipeline |
+| Artist | AI involvement | Pipeline |
 |---|---|---|
-| **Wágner** | Suno-assist only | Human-recorded → DistroKid → DSPs |
-| **Velvut** | Suno-assist only | Human-recorded → DistroKid → DSPs |
+| **Wágner** | None (100% human) | Human-recorded → DistroKid → DSPs |
+| **Velvut** | Ideation collaborator only (brainstorms ideas like a co-writer; never generates recordings) | Human-recorded → DistroKid → DSPs |
 | **DJ Farra** | 100% AI-generated | Suno → DistroKid → DSPs |
 | **Sobralenses** | 100% AI-generated | Suno → DistroKid → DSPs |
 
@@ -65,7 +65,7 @@ Press releases; media lists; interview prep documents; coverage reports.
 - **Breakthrough release:** "Ska: The Third Wave" compilation (1990s third-wave ska revival)
 - **Strategic partnerships (historical):** Dinemec Records (Switzerland), Crane Mountain Records (Boston)
 - **Historical independent artists (non-BEG sub-imprint):** Buzz Prophets, Nerve
-- **Legal status:** fictitious name under wgnr.ai, LLC
+- **Legal status:** fictitious name under WGNR, LLC
 - **DSP status:** documented but not currently on DSPs (open question §4)
 
 ## Brand Guidance

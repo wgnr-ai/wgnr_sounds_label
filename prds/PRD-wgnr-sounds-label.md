@@ -214,7 +214,7 @@ The historical catalog spans the Beloved Entertainment Group (BEG), an independe
 - **Buzz Prophets**
 - **Nerve**
 
-**Legal status (current):** BEG is currently filed as a **fictitious name under wgnr.ai, LLC**.
+**Legal status (current):** BEG is currently filed as a **fictitious name under WGNR, LLC**.
 
 ### 6.3 Roster reconciliation
 
@@ -567,8 +567,8 @@ The skill provides: Suno prompt anatomy (4 fields), genre tag vocabulary, lyrics
 
 | Artist | Suno role | Creative layer output flow |
 |---|---|---|
-| **Wágner** | Suno-assist only | Blueprint + lyrics → suno-prompter emits an ideation-test prompt set (production track is human-recorded in Studio, NOT from Suno). |
-| **Velvut** | Suno-assist only | Same as Wágner. |
+| **Wágner** | None (100% human) | Blueprint + lyrics → suno-prompter emits an ideation-test prompt set (production track is human-recorded in Studio, NOT from Suno). |
+| **Velvut** | Ideation collaborator only (brainstorms ideas like a co-writer; never generates recordings) | Same as Wágner. |
 | **DJ Farra** | 100% AI-generated | Blueprint + lyrics → suno-prompter emits a full Suno prompt set (production track is Suno-generated). |
 | **Sobralenses** | 100% AI-generated | Same as DJ Farra. |
 
