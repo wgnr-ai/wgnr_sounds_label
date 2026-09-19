@@ -1,7 +1,7 @@
 # Lyricist — Context
 
 > Project-scoped context for the `lyricist` agent profile (v3.0.0, Creative Song-Production Layer).
-> Last updated: 2026-08-30
+> Last updated: 2026-09-18 (Hook-First Mandate added after Principal review found Suno outperforming the agent on hook quality)
 
 ## Layer & Subfunction
 
