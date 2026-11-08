@@ -100,7 +100,7 @@ The 3 video agents form a separate **Visual Production Layer** (NOT an 11th depa
 
 ## Verification
 
-- `ls .a0proj/agents/` returns 18 directories (10 departments + wgnr-sounds-captain + 3 Creative Production Layer + 3 Visual Production Layer + mix-engineer).
+- `ls .a0proj/agents/` returns 20 directories (10 departments + wgnr-sounds-captain + 3 Creative Production Layer + 3 Visual Production Layer + mix-engineer + master-engineer + producer).
 - Each directory contains `agent.yaml`, `_context.md`, `prompts/agent.system.main.specifics.md`, `plugins/_model_config/config.json`, `plugins/_tool_access/config.json`, `plugins/_skills/config.json` (captain also carries `assets/`).
-- `.a0proj/agents.json` registers all 18 with slug + title + model_tier + profile_type.
+- `.a0proj/agents.json` registers all 20 with slug + title + model_tier + profile_type.
 - `.a0proj/scripts/validate_agent_yamls.py` exits 0 (all agent.yaml parse).
