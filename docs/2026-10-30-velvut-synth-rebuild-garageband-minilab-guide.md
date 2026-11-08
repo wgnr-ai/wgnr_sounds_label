@@ -286,7 +286,7 @@ Run this before you render the mixdown and again before you master. A mix that f
 
 | Setting | Value | Why |
 |---|---|---|
-| Sample rate | **44.1 kHz** (or 48 kHz if the session is already there) | DistroKid accepts either; do not upsample a 44.1 session to 48. |
+| Sample rate | **44.1 kHz** (or 48 kHz if the session is already there) | the distributor accepts either; do not upsample a 44.1 session to 48. |
 | Bit depth | **24-bit** | Headroom for mastering. 16-bit at mixdown throws away resolution you cannot get back. |
 | Dither | **Off** | Dither is applied once, at the very end, and only if the final delivery is 16-bit. |
 | Master peak | **-6 dBFS** headroom | The mastering chain needs room to work. |
@@ -330,7 +330,7 @@ GarageBand has no LUFS meter built in. Read loudness with an external meter on t
 
 | Item | Required |
 |---|---|
-| Container | **WAV** (24-bit, 44.1 kHz) — DistroKid's preferred input |
+| Container | **WAV** (24-bit, 44.1 kHz) — the distributor's preferred input |
 | Loudness | -14 LUFS integrated |
 | True peak | **-1.0 dBTP** |
 | Leading silence | **None** — trim to the first transient |
@@ -338,7 +338,7 @@ GarageBand has no LUFS meter built in. Read loudness with an external meter on t
 | Channels | Stereo, phase-checked |
 | Clipping | Zero samples over 0 dBFS |
 
-### 9.8 DistroKid upload checklist
+### 9.8 RouteNote upload checklist
 
 Before upload, confirm for each song:
 
@@ -346,7 +346,7 @@ Before upload, confirm for each song:
 - [ ] Integrated loudness reads **-14 LUFS**, true peak **-1.0 dBTP**.
 - [ ] **Title** matches the vault lyric file exactly, including any question mark — see the `Take Me Back?` ruling still open on the Velvut blockers list.
 - [ ] **Key** and **time signature** entered only if documented. If the vault says `UNVERIFIED`, leave it out of the metadata — do not guess to fill the field.
-- [ ] Artist name, ISRC assignment, and release date set in DistroKid.
+- [ ] Artist name, ISRC assignment, and release date set in RouteNote.
 - [ ] Master file archived to the Velvut masters folder, not left only on the working drive.
 
 ### 9.9 Pre-delivery QA — listen once more before it leaves
@@ -355,7 +355,7 @@ Before upload, confirm for each song:
 2. Full playthrough on **phone speaker** — the sub is gone; does the song still work?
 3. **Mono fold-down** — no element vanishes, no phase cancellation on the synth bus.
 4. **Loudness read after encode**, not just the WAV: a lossy pass can push true peak past -1.0 dBTP.
-5. Confirm the file in DistroKid's player matches what you heard locally before submitting for review.
+5. Confirm the file in RouteNote's player matches what you heard locally before submitting for review.
 
 ---
 
@@ -363,7 +363,7 @@ Before upload, confirm for each song:
 
 - **Exact preset names.** Deliberate — the libraries vary by version and a wrong preset name wastes your time at the DAW. Browse by the character described.
 - **Vocal recording chain.** Separate topic; the baritone is yours to record, and the Suno reference vocal is a placeholder, not a target.
-- **Per-platform master variants.** One master serves all platforms (§9.4); do not cut DSP-specific versions. Velvut masters still route through Studio for sign-off and DistroKid for delivery (§9.8).
+- **Per-platform master variants.** One master serves all platforms (§9.4); do not cut DSP-specific versions. Velvut masters still route through Studio for sign-off and RouteNote for delivery (§9.8).
 
 ---
 

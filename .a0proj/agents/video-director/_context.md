@@ -52,7 +52,7 @@ Part of the **Visual Production Layer** (PRD-wgnr-sounds-video-production.md §4
 ## WGNR Sounds Facts (every label agent must know)
 
 - **Brand relationship:** WGNR Sounds is a division of wgnr.ai (parent-child). Active brand source is the wgnr.ai brand guide until a dedicated Sounds guide ships (shared-until-dedicated rule).
-- **Sole distributor:** DistroKid (since 2023). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
+- **Sole distributor:** RouteNote (since 2026-11; DistroKid was distributor 2023–2026). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
 - **Multi-genre / eclectic discipline:** the layer is artist-agnostic; the Visual Constitution is per-artist (Velvut first, encoded as a skill so future artists get their own constitution skills).
 - **Baritone-vocalist rule (2026-08-31):** Velvut vocals = Wagner dos Santos, baritone male. Any lip-sync-adjacent or silhouette performance logic assumes the baritone frontman.
 - **Infrastructure (PRD §6):** ComfyUI at `/Users/wgnr/AI/comfyui/` (VERIFIED-FACT 2026-09-06); open-weights models (LTX-Video / HunyuanVideo) on Apple Silicon MPS; ffmpeg finishing. Model lock is UNVERIFIED-CLAIM until the on-host MPS probe.

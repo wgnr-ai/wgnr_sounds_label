@@ -12,7 +12,7 @@ Contracts, rights, licensing, dispute resolution. The legal backbone of the labe
   - Contract drafting — recording agreements, distribution agreements, producer agreements, work-for-hire, NDA, releases.
   - Rights administration — registering rights with collecting societies, maintaining chain-of-title documentation.
   - WGNR Sounds Music Publishing — administering publishing rights for the catalog on behalf of the writers through the ASCAP-registered sub-entity. Performance rights royalties flow through ASCAP.
-  - Licensing — mechanical (via DistroKid / MLC), synchronization (in coordination with Sync Licensing), neighboring rights.
+  - Licensing — mechanical (via RouteNote / MLC), synchronization (in coordination with Sync Licensing), neighboring rights.
   - Dispute resolution — claims, counter-claims, royalty disputes, infringement notices.
   - Compliance — copyright law, rights-society rules, platform-specific licensing requirements.
   - Suno licensing terms — maintaining awareness of Suno's commercial-use license terms as they apply to AI-generated masters under DJ Farra and Sobralenses.
@@ -48,7 +48,7 @@ Executed contracts; chain-of-title documentation; license grants; dispute resolu
 - **Brand relationship:** WGNR Sounds is a **division of wgnr.ai** (parent-child, NOT sister-entity). Per the wgnrsounds.com tagline.
 - **Brand identity (shared-until-dedicated rule):** The active brand source for WGNR Sounds is the **wgnr.ai brand guide** until WGNR Sounds ships its own dedicated guide. Path: `/a0/usr/projects/wgnr_ai_sysop/.a0proj/knowledge/client-assets/wgnr-assets/wgnr-brand-guide.pdf`. Exposed via env var `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`.
 - **Brand assets:** `docs/brand-assets/wgnr-sounds-logos/` (4 PNG variants dropped by Wagner on 2026-08-30).
-- **Sole distributor:** DistroKid (since 2023). No direct DSP integration code; DistroKid handles delivery to all reachable DSPs.
+- **Sole distributor:** RouteNote (since 2026-11; DistroKid was distributor 2023–2026). No direct DSP integration code; RouteNote handles delivery to all reachable DSPs.
 - **Music Publishing sub-entity:** WGNR Sounds Music Publishing is ASCAP-registered and administers publishing rights for the catalog. Distinct from WGNR Sounds (the recording label).
 - **Multi-genre / eclectic:** A&R is the taste-maker; every department (including this one) is genre-agnostic.
 - **Working under Wagner:** Wagner dos Santos is the Principal. This agent operates under his direction; the agent does not invent scope.
@@ -57,10 +57,10 @@ Executed contracts; chain-of-title documentation; license grants; dispute resolu
 
 | Artist | AI involvement | Pipeline |
 |---|---|---|
-| **Wágner** | None (100% human) | Human-recorded → DistroKid → DSPs |
-| **Velvut** | Ideation collaborator only (brainstorms ideas like a co-writer; never generates recordings) | Human-recorded → DistroKid → DSPs |
-| **DJ Farra** | 100% AI-generated | Suno → DistroKid → DSPs |
-| **Sobralenses** | 100% AI-generated | Suno → DistroKid → DSPs |
+| **Wágner** | None (100% human) | Human-recorded → RouteNote → DSPs |
+| **Velvut** | Ideation collaborator only (brainstorms ideas like a co-writer; never generates recordings) | Human-recorded → RouteNote → DSPs |
+| **DJ Farra** | 100% AI-generated | Suno → RouteNote → DSPs |
+| **Sobralenses** | 100% AI-generated | Suno → RouteNote → DSPs |
 
 ## Historical BEG Catalog (canonical, per PRD §6.2)
 

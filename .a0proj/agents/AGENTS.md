@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Project-scoped agent profiles for the WGNR Sounds Record Label project — the 10 canonical label departments translated into v2.0.0 agent profiles. These agents extend the framework for the label's specific operational context (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, wgnr.ai-shared brand guide).
+Project-scoped agent profiles for the WGNR Sounds Record Label project — the 10 canonical label departments translated into v2.0.0 agent profiles. These agents extend the framework for the label's specific operational context (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, wgnr.ai-shared brand guide).
 
 ## Ownership
 
@@ -45,6 +45,9 @@ The Captain auto-selects for new chats in this project via `.a0proj/default_agen
 | `artist-relations` | Artist Relations | judgment | Default Coding and Reasoning |
 | `sync` | Sync Licensing | execution | Fast Sub-Agent Inference |
 | `operations` | Operations / Label Management | judgment | Default Coding and Reasoning |
+| `mix-engineer` | Mixing Engineer | execution | Fast Sub-Agent Inference |
+| `master-engineer` | Mastering Engineer | execution | Fast Sub-Agent Inference |
+| `producer` | Producer | judgment | Default Coding and Reasoning |
 
 ## Creative Production Layer (v3.0.0)
 
@@ -73,7 +76,7 @@ The 3 video agents form a separate **Visual Production Layer** (NOT an 11th depa
 | `.a0proj/agents/wgnr-sounds-captain/` | WGNR Sounds Captain — project orchestrator. Coordinates the 10 label departments and 5 label-specific skills per PRD §7. Auto-selected for new chats via `.a0proj/default_agent.json`. |
 | `.a0proj/agents/ar/` | A&R (Artist & Repertoire) — Find, sign, and develop artists. The creative taste-making function of the label. |
 | `.a0proj/agents/marketing/` | Marketing & Promotion — Build and execute the go-to-market plan for each release. Make listeners care. |
-| `.a0proj/agents/distribution/` | Distribution & Digital Strategy — Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is DistroKid (in continuous use since 2023). |
+| `.a0proj/agents/distribution/` | Distribution & Digital Strategy — Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is RouteNote (sole distributor since 2026-11; DistroKid was distributor 2023–2026). |
 | `.a0proj/agents/publicity/` | Publicity / PR — Earn media coverage and shape the public narrative around releases and artists. |
 | `.a0proj/agents/legal/` | Legal & Business Affairs — Contracts, rights, licensing, dispute resolution. The legal backbone of the label. Documents and administers WGNR Sounds Music Publishing (ASCAP-registered). |
 | `.a0proj/agents/royalties/` | Royalties & Finance — Money in, money out, money owed. Royalty accounting, statements, advances, recoupment. Future-state department — activates when volumes grow or a publishing-administration partnership is signed. |
@@ -81,6 +84,7 @@ The 3 video agents form a separate **Visual Production Layer** (NOT an 11th depa
 | `.a0proj/agents/artist-relations/` | Artist Relations — Direct liaison with signed artists. Day-to-day relationship management. |
 | `.a0proj/agents/sync/` | Sync Licensing — Place the label's catalog in film, TV, advertising, and video games. Adjacent-revenue engine. Aspirational — no active sync pitching today; activates if a publishing-administration partnership is signed. |
 | `.a0proj/agents/operations/` | Operations / Label Management — The glue. Owns inter-department workflow, the release calendar, the budget envelope, and the reporting cadence. |
+| `.a0proj/agents/mix-engineer/` | Mixing Engineer — Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno. Mixing Engineer handles gain staging, bus architecture, stereo field (panning and depth), EQ, compression, gating, sidechain dynamics, modulation, reverb/delay sends, saturation, automation. Creative placement: what sits where in the stereo field and why. Delivers a mixdown (24-bit WAV) plus a mix report documenting panning placement, at least one sidechain, at least one gate, reverb sends, measurements taken, and what was deliberately left alone. |
 | `.a0proj/agents/song-architect/` | Song Architect — Creative Production Layer (v3.0.0). Develops the song idea — concept, structure, arrangement, genre/mood/tempo blueprint. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint. Upstream of `lyricist` and `suno-prompter`. Department affiliation: A&R (song-concept subfunction). |
 | `.a0proj/agents/lyricist/` | Lyricist — Creative Production Layer (v3.0.0). Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header. Department affiliation: Studio (creative-writing subfunction). |
 | `.a0proj/agents/suno-prompter/` | Suno Prompter — Creative Production Layer (v3.0.0). Translates the song blueprint + finished lyrics into verified Suno-compatible prompts. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure. Skill: `suno-prompt-compatibility-spec` is mandatory before emission. Department affiliation: Distribution & Digital Strategy (Suno export subfunction). |
@@ -92,11 +96,11 @@ The 3 video agents form a separate **Visual Production Layer** (NOT an 11th depa
 
 - The wgnr-sounds-captain profile mirrors the structure at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/sysop-captain/` (agent.yaml + prompts/agent.system.main.specifics.md + plugins/_model_config/ + assets/avatar.webp). Department agent profiles mirror the structure at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/agents/wgnr-project-dev/` (agent.yaml + _context.md + prompts/ + plugins/).
 - Model preset is canonical from `/a0/usr/projects/wgnr_ai_sysop/.a0proj/knowledge/model_presets_v1.csv`. See each agent's `_context.md` for tier rationale and any deviation notes.
-- All agents inherit the WGNR Sounds brand rule (shared-until-dedicated), the DistroKid sole-distributor contract, and the multi-genre / eclectic discipline.
+- All agents inherit the WGNR Sounds brand rule (shared-until-dedicated), the RouteNote sole-distributor contract, and the multi-genre / eclectic discipline.
 
 ## Verification
 
-- `ls .a0proj/agents/` returns 17 directories (10 departments + wgnr-sounds-captain + 3 Creative Production Layer + 3 Visual Production Layer).
-- Each directory contains `agent.yaml`, `_context.md`, `prompts/agent.system.main.role.md`, `plugins/_model_config/config.json`, `plugins/_tool_access/config.json`, `plugins/_skills/config.json` (captain also carries `assets/`).
-- `.a0proj/agents.json` registers all 17 with slug + title + model_tier + profile_type.
+- `ls .a0proj/agents/` returns 18 directories (10 departments + wgnr-sounds-captain + 3 Creative Production Layer + 3 Visual Production Layer + mix-engineer).
+- Each directory contains `agent.yaml`, `_context.md`, `prompts/agent.system.main.specifics.md`, `plugins/_model_config/config.json`, `plugins/_tool_access/config.json`, `plugins/_skills/config.json` (captain also carries `assets/`).
+- `.a0proj/agents.json` registers all 18 with slug + title + model_tier + profile_type.
 - `.a0proj/scripts/validate_agent_yamls.py` exits 0 (all agent.yaml parse).

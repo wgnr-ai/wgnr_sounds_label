@@ -1,6 +1,6 @@
 name: distribution
 title: Distribution & Digital Strategy
-description: Sole integrator is DistroKid (since 2023). Owns the per-artist Suno flow routing, metadata hygiene, release calendar, and DSP editorial pitching.
+description: Sole integrator is RouteNote (since 2026-11; DistroKid was distributor 2023–2026). Owns the per-artist Suno flow routing, metadata hygiene, release calendar, and DSP editorial pitching.
 version: 2.0.0
 created: 2026-08-30
 updated: 2026-08-30
@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: label-department
 department: Distribution & Digital Strategy
 model_tier: execution
-context: Use this agent for Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is DistroKid (in continuous use since 2023). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
+context: Use this agent for Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is RouteNote (sole distributor since 2026-11; DistroKid was distributor 2023–2026). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
 dependencies:
   - Studio
   - Marketing & Promotion

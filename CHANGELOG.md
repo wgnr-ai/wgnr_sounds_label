@@ -5,6 +5,14 @@ All notable changes to the WGNR Sounds Record Label project are documented in th
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased] — 2026-11-08
+
+### Added
+- **Bob Ludwig mastering persona (Principal direction):** master-engineer profile v1.1.0 — Ludwig doctrine in `_context.md` + specifics prompt (dynamics are the punch, loudness-war resistance, less-is-more, whole-song assessment); new skill `.a0proj/skills/loudness-conformance/` (v1.0.0) carries the method layer + punch doctrine, and resolves the dangling `skills_enabled` reference in the profile yaml. Skills index corrected to 10 entries (was drift at 7: stem-mix-protocol, suno-prompt-compatibility-spec, loudness-conformance were unindexed). Persona lineage stated correctly: Ludwig is Sterling Sound (VP, early career) → Gateway Mastering founder.
+
+### Changed
+- **Distributor correction (Principal directive, 2026-11-08):** DistroKid account canceled; **RouteNote is the sole distributor since 2026-11** (DistroKid was distributor 2023–2026). All current-fact surfaces updated across 4 scripted passes (~240 replacements in 50+ files): both PRDs, root/docs/prds AGENTS.md chains, all 20 agent `_context.md` / `agent.yaml` / role prompts, project.json, and the 7 label skills (distrokid-delivery skill body now documents the RouteNote pipeline under its grandfathered name). Historical records (dated session docs, PRD changelog rows) intentionally untouched. Recorded to memory `PpaNsuvhiC`. Open item: renaming the `distrokid-delivery` skill directory is a structural change pending Principal decision.
+
 ## [Unreleased] — 2026-09-15
 
 ### Added

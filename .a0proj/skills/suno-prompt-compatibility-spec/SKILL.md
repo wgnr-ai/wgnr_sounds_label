@@ -12,6 +12,7 @@ trigger_phrases:
   - "[bridge]"
   - suno style
   - suno genre
+last_updated: 2026-11-08T18:00:00-05:00
 ---
 
 # suno-prompt-compatibility-spec — Label-Specific Skill
@@ -26,7 +27,7 @@ trigger_phrases:
 This skill exists to make the **"verified Suno-compatible"** claim auditable. The suno-prompter agent MUST run the verification checklist (§7) before emitting any Suno-ready prompt set; without this skill, the claim is unfalsifiable.
 
 Why this matters for WGNR Sounds:
-- The label ships both human-recorded (Velvut, Wágner) and AI-generated (DJ Farra, Sobralenses) tracks through DistroKid.
+- The label ships both human-recorded (Velvut, Wágner) and AI-generated (DJ Farra, Sobralenses) tracks through RouteNote.
 - Suno's prompt format is the upstream input for every AI-generated release and a critical ideation tool for every human-recorded release.
 - Suno's interface and prompt conventions evolve; the skill body must be reviewed against the current Suno interface and updated when Suno's format changes.
 

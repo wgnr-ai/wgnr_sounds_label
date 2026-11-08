@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: creative-production
 department: Studio (Recording & Engineering)
 model_tier: judgment
-context: Use this agent for Song lyric writing for the WGNR Sounds roster. Produces finished song lyrics as a complete markdown deliverable (title, BPM target, mood, theme, target artist, section labels, line-by-line lyrics, optional pronunciation notes). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md §13 (Creative Song-Production Layer) as the canonical contract.
+context: Use this agent for Song lyric writing for the WGNR Sounds roster. Produces finished song lyrics as a complete markdown deliverable (title, BPM target, mood, theme, target artist, section labels, line-by-line lyrics, optional pronunciation notes). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md §13 (Creative Song-Production Layer) as the canonical contract.
 dependencies:
   - song-architect
   - suno-prompter

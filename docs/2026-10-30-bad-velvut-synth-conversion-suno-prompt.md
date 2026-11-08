@@ -1,12 +1,12 @@
 ---
-last_updated: 2026-10-30T17:43:00
+last_updated: 2026-11-01T14:17:41
 status: delivered
 artist: Velvut
 song: Bad
 series_position: 4
 route: suno-synth-re-render
-tempo: UNVERIFIED — not documented
-key: UNVERIFIED — not documented
+tempo: 146
+key: A major
 time_signature: UNVERIFIED — not documented
 vocal_range: F2-D4
 suno_role: assist

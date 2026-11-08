@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: label-department
 department: Sync Licensing
 model_tier: execution
-context: Use this agent for Place the label's catalog in film, TV, advertising, and video games. Adjacent-revenue engine. Aspirational — no active sync pitching today; activates if a publishing-administration partnership is signed. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
+context: Use this agent for Place the label's catalog in film, TV, advertising, and video games. Adjacent-revenue engine. Aspirational — no active sync pitching today; activates if a publishing-administration partnership is signed. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
 dependencies:
   - Legal & Business Affairs
   - Studio

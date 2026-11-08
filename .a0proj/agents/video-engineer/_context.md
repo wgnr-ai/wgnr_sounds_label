@@ -56,7 +56,7 @@ Part of the **Visual Production Layer** (PRD-wgnr-sounds-video-production.md §4
 ## WGNR Sounds Facts (every label agent must know)
 
 - **Brand relationship:** WGNR Sounds is a division of wgnr.ai (parent-child). Active brand source is the wgnr.ai brand guide (shared-until-dedicated rule).
-- **Sole distributor:** DistroKid (since 2023). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
+- **Sole distributor:** RouteNote (since 2026-11; DistroKid was distributor 2023–2026). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
 - **Track facts (video project, re-bind 2026-09-13):** "Is This How It Ends?" — 148 BPM, 4/4 (Principal-declared 2026-09-13, video project); house identity: nu-metal and alt-rock; quiet-loud dynamics (quiet introspective low-baritone verses over tom-toms, wall-of-sound choruses). Onset verification against the master audio is REQUIRED before render timing (no prior documented tempo). (Historical: "Take Me Back" — 151 BPM, 4/4, Principal-declared 2026-09-06 — superseded for the video project 2026-09-13.)
 - **Baritone-vocalist rule (2026-08-31):** Velvut vocals = Wagner dos Santos, baritone male. Any lip-sync-adjacent or silhouette performance logic assumes the baritone frontman.
 

@@ -27,7 +27,7 @@ WGNR Sounds is a **division of wgnr.ai** (parent-child relationship). The PRD re
 - The local brand assets path at `docs/brand-assets/` (Wagner dropped 4 logos on 2026-08-30; brand-guide PDF placeholder still pending).
 - Until a dedicated WGNR Sounds brand guide ships, the **wgnr.ai brand guide is the active brand source** at `/a0/usr/projects/wgnr_ai_sysop/.a0proj/knowledge/client-assets/wgnr-assets/wgnr-brand-guide.pdf` (shared-until-dedicated rule per PRD §4).
 - WGNR Sounds Music Publishing (ASCAP-registered sub-entity) documented under §7.5 Legal & Business Affairs.
-- DistroKid as the sole distributor since 2023 (§7.3).
+- RouteNote as the sole distributor since 2026-11 (DistroKid was distributor 2023–2026; §7.3).
 - The per-artist Suno role matrix (§5.4) — DJ Farra + Sobralenses are 100% AI-generated; Wágner + Velvut are Suno-assist only.
 - The active roster (§6.1) and the historical BEG catalog (§6.2).
 
@@ -49,5 +49,5 @@ WGNR Sounds is a **division of wgnr.ai** (parent-child relationship). The PRD re
 
 | Path | Scope |
 |---|---|
-| `PRD-wgnr-sounds-label.md` | v1.1 foundation PRD — label identity (division-of-WGNR framing), operating model, 10 canonical departments, per-artist Suno role matrix, DistroKid distribution pipeline, WGNR Sounds Music Publishing sub-entity, active roster + BEG historical catalog, release lifecycle, open questions |
+| `PRD-wgnr-sounds-label.md` | v1.1 foundation PRD — label identity (division-of-WGNR framing), operating model, 10 canonical departments, per-artist Suno role matrix, RouteNote distribution pipeline, WGNR Sounds Music Publishing sub-entity, active roster + BEG historical catalog, release lifecycle, open questions |
 | `PRD-wgnr-sounds-video-production.md` | v1.1.1 draft — Visual Production Layer: 3 video agents (`video-director`, `video-engineer`, `video-coordinator`) + 2 skills; local ComfyUI/open-weights pipeline on Mac Studio MPS; Velvut Visual Constitution; Draft-First render gating; first deliverable Velvut "Is This How It Ends?" music video (track re-bind 2026-09-13; tempo AUTHORITATIVE 107 BPM per Principal ruling 2026-09-14; 148 historical) |

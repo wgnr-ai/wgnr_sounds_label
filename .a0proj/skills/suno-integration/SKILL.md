@@ -8,6 +8,8 @@ trigger_phrases:
   - "human recorded"
   - "master source"
   - "ai pipeline"
+last_updated: 2026-11-08T17:50:00-05:00
+last_updated: 2026-11-08T18:00:00-05:00
 ---
 
 # suno-integration — Label-Specific Skill
@@ -25,16 +27,16 @@ The WGNR Sounds active roster splits between two pipelines. The per-artist Suno 
 
 | Artist | Suno role | Master source | Distribution flow |
 |---|---|---|---|
-| **DJ Farra** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → DistroKid → DSPs |
-| **Sobralenses** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → DistroKid → DSPs |
-| **Velvut** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → DistroKid → DSPs |
-| **Wágner** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → DistroKid → DSPs |
+| **DJ Farra** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → RouteNote → DSPs |
+| **Sobralenses** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → RouteNote → DSPs |
+| **Velvut** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → RouteNote → DSPs |
+| **Wágner** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → RouteNote → DSPs |
 
 ## Workflow
 
 1. **Identify artist** — confirm artist name against the active roster (Wagner dos Santos 2026-08-30).
 2. **Confirm Suno role** — look up the matrix above. Do not infer; the matrix is canonical.
-3. **Match pipeline** — AI-pipeline artists route Suno → DistroKid. Human-recorded artists route Studio → DistroKid.
+3. **Match pipeline** — AI-pipeline artists route Suno → RouteNote. Human-recorded artists route Studio → RouteNote.
 4. **Metadata tagging** — tag every release with `suno_role: <role>` and `master_source: <suno|studio>` for rights administration and reporting hand-off.
 5. **Best practices** (Suno prompt-crafting for label release quality):
    - Match the label's multi-genre / eclectic discipline — Suno prompts should explore rather than narrow.

@@ -37,7 +37,7 @@ Velvut needs its first music video — now "Is This How It Ends?" (video-project
 ### Non-goals (v1.0.0)
 - Any cloud video-generation service (Runway et al.) — out of scope permanently unless the Principal reverses.
 - Live-action filming/production crews.
-- Changes to the audio pipeline (Suno/studio flow, PRD §5.4/§13) or DistroKid distribution flow.
+- Changes to the audio pipeline (Suno/studio flow, PRD §5.4/§13) or RouteNote distribution flow.
 - Agent Zero framework core changes (separate SysOp tickets).
 
 ## 4. Position in the label
@@ -107,7 +107,7 @@ A Visual Production Layer — NOT a new label department. It sits beside the Cre
 
 ## 11. Out of scope
 
-Cloud video services; live-action production; audio/Suno pipeline changes; DistroKid changes; framework core edits; budget for external vendors.
+Cloud video services; live-action production; audio/Suno pipeline changes; RouteNote changes; framework core edits; budget for external vendors.
 
 ## 12. References
 

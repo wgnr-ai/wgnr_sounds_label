@@ -90,48 +90,79 @@
       "path": ".a0proj/agents/royalties/agent.yaml"
     },
     {
-      "slug": "studio",
-      "title": "Studio (Recording & Engineering)",
-      "description": "Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno.",
-      "model_tier": "execution",
-      "profile_type": "label-department",
-      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
-      "primary_role": "Capture and finish the music — recording sessions, mixing, mastering. Active only for the human-recorded pipeline (Velvut + Wágner); AI-generated releases bypass Studio and source masters directly from Suno.",
-      "model_preset": "Fast Sub-Agent Inference",
-      "main_model": "cerebras/gpt-oss-120b",
-      "skills_enabled": [
-        "suno-integration"
-      ],
-      "path": ".a0proj/agents/studio/agent.yaml"
-    },
-    {
       "slug": "artist-relations",
       "title": "Artist Relations",
       "description": "Direct liaison with signed artists. Single point of contact, conflict resolution, tour coordination, career check-ins.",
       "model_tier": "judgment",
       "profile_type": "label-department",
-      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
-      "primary_role": "Direct liaison with signed artists. Day-to-day relationship management.",
+      "primary_role": "Use this agent for Direct liaison with signed artists",
+      "department": "Artist Relations",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.1",
+      "main_model": "",
       "skills_enabled": [],
       "path": ".a0proj/agents/artist-relations/agent.yaml"
     },
     {
-      "slug": "sync",
-      "title": "Sync Licensing",
-      "description": "Aspirational — places catalog in film, TV, advertising, and video games. Activates if a publishing-administration partnership is signed. Catalog assets: active roster + historical BEG 30+ albums.",
+      "slug": "lyricist",
+      "title": "Lyricist (Song Lyrics)",
+      "description": "Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster (Wágner, Velvut, DJ Farra, Sobralenses) and ad-hoc creative work. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header (title, BPM, theme, target artist).",
+      "model_tier": "judgment",
+      "profile_type": "creative-production",
+      "primary_role": "Use this agent for Song lyric writing for the WGNR Sounds roster",
+      "department": "Studio (Recording & Engineering)",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "",
+      "skills_enabled": [
+        "suno-prompt-compatibility-spec"
+      ],
+      "path": ".a0proj/agents/lyricist/agent.yaml"
+    },
+    {
+      "slug": "mix-engineer",
+      "title": "Mixing Engineer",
+      "description": "Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno. Mixing Engineer handles gain staging, bus architecture, stereo field (panning and depth), EQ, compression, gating, sidechain dynamics, modulation, reverb/delay sends, saturation, automation. Creative placement: what sits where in the stereo field and why. Delivers a mixdown (24-bit WAV) plus a mix report documenting panning placement, at least one sidechain, at least one gate, reverb sends, measurements taken, and what was deliberately left alone. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts and prds/PRD-wgnr-sounds-label.md as the canonical contract.",
       "model_tier": "execution",
       "profile_type": "label-department",
-      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
-      "primary_role": "Place the label's catalog in film, TV, advertising, and video games. Adjacent-revenue engine. Aspirational — no active sync pitching today; activates if a publishing-administration partnership is signed.",
+      "primary_role": "Use this agent for mixing — stems in, mixdown out",
+      "department": "Studio (Recording & Engineering)",
       "model_preset": "Fast Sub-Agent Inference",
       "main_model": "cerebras/gpt-oss-120b",
       "skills_enabled": [
-        "beg-catalog-metadata",
-        "ascap-publishing"
+        "stem-mix-protocol"
       ],
-      "path": ".a0proj/agents/sync/agent.yaml"
+      "path": ".a0proj/agents/mix-engineer/agent.yaml"
+    },
+    {
+      "slug": "master-engineer",
+      "title": "Mastering Engineer",
+      "description": "Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno. Mastering Engineer owns the master — mixdown in, distribution-ready master out. Runs the §9.2 stop-condition gate. Has explicit authority to REJECT a mixdown and return it with named defects. Cannot re-mix.",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Use this agent for mastering — mixdown in, master out",
+      "department": "Studio (Recording & Engineering)",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "cerebras/gpt-oss-120b",
+      "skills_enabled": [
+        "loudness-conformance"
+      ],
+      "path": ".a0proj/agents/master-engineer/agent.yaml"
+    },
+    {
+      "slug": "producer",
+      "title": "Producer",
+      "description": "Owns the creative direction of the record — not the technical execution. Sets arrangement and sonic intent before a mix begins. Adjudicates disputes between mix and master. Escalate-only authority: may NOT override a mastering rejection — only escalate to wgnr-sounds-captain.",
+      "model_tier": "judgment",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Use this agent for creative direction and dispute adjudication",
+      "department": "Studio / A&R boundary",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "velvut-sonic-identity"
+      ],
+      "path": ".a0proj/agents/producer/agent.yaml"
     },
     {
       "slug": "operations",
@@ -139,10 +170,10 @@
       "description": "The glue. Owns inter-department workflow, release calendar, budget envelope, reporting cadence. Escalation point for cross-department conflicts.",
       "model_tier": "judgment",
       "profile_type": "label-department",
-      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
-      "primary_role": "The glue. Owns inter-department workflow, the release calendar, the budget envelope, and the reporting cadence.",
+      "primary_role": "Use this agent for The glue",
+      "department": "Operations / Label Management",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.1",
+      "main_model": "",
       "skills_enabled": [
         "rosters-and-catalog-reconciliation",
         "distrokid-delivery"
@@ -150,64 +181,45 @@
       "path": ".a0proj/agents/operations/agent.yaml"
     },
     {
-      "slug": "wgnr-sounds-captain",
-      "title": "WGNR Sounds Captain",
-      "description": "Project orchestrator — coordinates the 10 label departments and 5 skills per PRD §7.",
-      "model_tier": "judgment",
-      "profile_type": "project-orchestrator",
-      "department_reference": "PRD §7 + §12 (WGNR Sounds Record Label v2.1)",
-      "primary_role": "orchestration",
-      "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.1",
-      "skills_enabled": [
-        "suno-integration",
-        "distrokid-delivery",
-        "beg-catalog-metadata",
-        "ascap-publishing",
-        "rosters-and-catalog-reconciliation"
-      ],
-      "path": ".a0proj/agents/wgnr-sounds-captain/"
-    },
-    {
-      "slug": "lyricist",
-      "title": "Lyricist (Song Lyrics)",
-      "description": "Writes finished song lyrics as a complete deliverable for the WGNR Sounds roster (Wágner, Velvut, DJ Farra, Sobralenses) and ad-hoc creative work. Multi-genre fluency; structural awareness (verse/pre-chorus/chorus/hook/bridge/outro); metadata header (title, BPM, theme, target artist). Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
-      "model_tier": "judgment",
-      "profile_type": "creative-production",
-      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
-      "primary_role": "Song lyric writing for the WGNR Sounds roster. Produces finished song lyrics as a complete markdown deliverable.",
-      "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.3",
-      "skills_enabled": [
-        "suno-prompt-compatibility-spec"
-      ],
-      "path": ".a0proj/agents/lyricist/agent.yaml"
-    },
-    {
       "slug": "song-architect",
       "title": "Song Architect (Song Concept & Blueprint)",
-      "description": "Develops the song idea — concept, structure, arrangement notes, genre/mood/tempo blueprint — as a complete deliverable for WGNR Sounds. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint. Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
+      "description": "Develops the song idea — concept, structure, arrangement notes, genre/mood/tempo blueprint — as a complete deliverable for WGNR Sounds. Per-artist Suno role pre-check (PRD §5.4) is mandatory in every blueprint.",
       "model_tier": "judgment",
       "profile_type": "creative-production",
-      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
-      "primary_role": "Song concept and blueprint development for the WGNR Sounds roster. Produces a structured markdown song blueprint.",
+      "primary_role": "Use this agent for Song concept and blueprint development for the WGNR Sounds roster",
+      "department": "A&R (Artist & Repertoire)",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.1",
+      "main_model": "",
       "skills_enabled": [
         "suno-prompt-compatibility-spec"
       ],
       "path": ".a0proj/agents/song-architect/agent.yaml"
     },
     {
+      "slug": "studio",
+      "title": "Studio (Recording & Engineering)",
+      "description": "Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno.",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "primary_role": "Use this agent for Capture and finish the music — recording sessions, mixing, mastering",
+      "department": "Studio (Recording & Engineering)",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "",
+      "skills_enabled": [
+        "suno-integration"
+      ],
+      "path": ".a0proj/agents/studio/agent.yaml"
+    },
+    {
       "slug": "suno-prompter",
       "title": "Suno Prompter (Suno Export)",
-      "description": "Translates the song blueprint + finished lyrics into verified Suno-compatible prompts for the WGNR Sounds DistroKid pipeline. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure. Part of the Creative Song-Production Layer (v3.0.0, PRD §13).",
+      "description": "Translates the song blueprint + finished lyrics into verified Suno-compatible prompts for the WGNR Sounds DistroKid pipeline. Per-artist Suno role (PRD §5.4) determines 100% AI vs Suno-assist prompt structure.",
       "model_tier": "judgment",
       "profile_type": "creative-production",
-      "department_reference": "PRD §13 (WGNR Sounds Record Label v3.0.0) — Creative Song-Production Layer",
-      "primary_role": "Suno prompt export for the WGNR Sounds DistroKid pipeline. Produces verified Suno-ready prompt documents.",
+      "primary_role": "Use this agent for Suno prompt export for the WGNR Sounds DistroKid pipeline",
+      "department": "Distribution & Digital Strategy",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.1",
+      "main_model": "",
       "skills_enabled": [
         "suno-prompt-compatibility-spec",
         "suno-integration",
@@ -216,15 +228,46 @@
       "path": ".a0proj/agents/suno-prompter/agent.yaml"
     },
     {
+      "slug": "sync",
+      "title": "Sync Licensing",
+      "description": "Aspirational — places catalog in film, TV, advertising, and video games. Activates if a publishing-administration partnership is signed. Catalog assets: active roster + historical BEG 30+ albums.",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "primary_role": "Use this agent for Place the label's catalog in film, TV, advertising, and video games",
+      "department": "Sync Licensing",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "",
+      "skills_enabled": [
+        "beg-catalog-metadata",
+        "ascap-publishing"
+      ],
+      "path": ".a0proj/agents/sync/agent.yaml"
+    },
+    {
+      "slug": "video-coordinator",
+      "title": "Video Coordinator (Render Ops & Delivery)",
+      "description": "Runs render-queue operations for the WGNR Sounds video pipeline — asset naming and version tracking, Draft-First gate logging, disk hygiene on the Mac Studio, and delivery packaging per platform specs (YouTube 16:9, TikTok and Reels 9:16).",
+      "model_tier": "execution",
+      "profile_type": "visual-production",
+      "primary_role": "Use this agent for video render-queue operations and delivery packaging — gate log records of which drafts were confirmed by whom and when, asset naming and version tracking, disk hygiene, and platform-spec deliverables",
+      "department": "Operations / Label Management (render-ops)",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "",
+      "skills_enabled": [
+        "comfyui-video-pipeline"
+      ],
+      "path": ".a0proj/agents/video-coordinator/agent.yaml"
+    },
+    {
       "slug": "video-director",
       "title": "Video Director (Treatment & Vision)",
-      "description": "Central vision-holder per artist (Velvut first) for WGNR Sounds music videos. Produces treatments, storyboards, and shot lists under the Velvut Visual Constitution, enforces the Constitution at review gates, and recommends draft-preview judgments to the Principal. Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
+      "description": "Central vision-holder per artist (Velvut first) for WGNR Sounds music videos. Produces treatments, storyboards, and shot lists under the Velvut Visual Constitution, enforces the Constitution at review gates, and recommends draft-preview judgments to the Principal.",
       "model_tier": "judgment",
       "profile_type": "visual-production",
-      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
-      "primary_role": "Music video treatment and vision per artist (Velvut first) — treatment, storyboard, shot list, Constitution enforcement, draft-preview judgment recommendations.",
+      "primary_role": "Use this agent for music video treatment and vision work — concept, storyboard, shot list, silhouette strategy, fog and lighting notes, and Visual Constitution enforcement at review gates for WGNR Sounds artists (Velvut first)",
+      "department": "Marketing & Promotion (visual-creative)",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.3",
+      "main_model": "",
       "skills_enabled": [
         "velvut-visual-constitution",
         "comfyui-video-pipeline"
@@ -234,13 +277,13 @@
     {
       "slug": "video-engineer",
       "title": "Video Engineer (ComfyUI Pipeline)",
-      "description": "Builds and runs the local ComfyUI video pipeline for WGNR Sounds — workflow graphs, open-weights model ops on Apple Silicon MPS, Draft-First render ladder, audio-reactive beat mapping, ffmpeg stitch + finishing. Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
+      "description": "Builds and runs the local ComfyUI video pipeline for WGNR Sounds — text-to-video and image-to-video workflow graphs, open-weights model ops on Apple Silicon MPS, Draft-First render ladder implementation, audio-reactive beat mapping, and the ffmpeg stitch plus finishing chain.",
       "model_tier": "precision",
       "profile_type": "visual-production",
-      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
-      "primary_role": "ComfyUI workflow engineering and render execution — low-res motion-vector drafts, gated hi-res cycles, beat mapping, ffmpeg stitch + finishing.",
+      "primary_role": "Use this agent for ComfyUI workflow engineering and render execution on the local pipeline — low-res motion-vector drafts, gated hi-res cycles, beat mapping to the master track BPM, and ffmpeg stitch plus color and grain finishing",
+      "department": "Studio (video-engineering)",
       "model_preset": "Default Coding and Reasoning",
-      "main_model": "zai_coding/glm-5.3",
+      "main_model": "",
       "skills_enabled": [
         "velvut-visual-constitution",
         "comfyui-video-pipeline"
@@ -248,21 +291,17 @@
       "path": ".a0proj/agents/video-engineer/agent.yaml"
     },
     {
-      "slug": "video-coordinator",
-      "title": "Video Coordinator (Render Ops & Delivery)",
-      "description": "Runs render-queue operations for the WGNR Sounds video pipeline — asset naming and version tracking, Draft-First gate logging, disk hygiene on the Mac Studio, delivery packaging per platform specs (YouTube 16:9, TikTok/Reels 9:16). Part of the Visual Production Layer (v4.0.0, PRD-wgnr-sounds-video-production.md §7).",
-      "model_tier": "execution",
-      "profile_type": "visual-production",
-      "department_reference": "PRD-wgnr-sounds-video-production.md §7 (Visual Production Layer v4.0.0)",
-      "primary_role": "Video render-queue operations and delivery packaging — gate logging, naming, versioning, disk hygiene, platform-spec deliverables.",
-      "model_preset": "Fast Sub-Agent Inference",
-      "main_model": "cerebras/gpt-oss-120b",
-      "skills_enabled": [
-        "comfyui-video-pipeline"
-      ],
-      "path": ".a0proj/agents/video-coordinator/agent.yaml"
+      "slug": "wgnr-sounds-captain",
+      "title": "WGNR Sounds Captain",
+      "description": "Project orchestrator for the WGNR Sounds Record Label project. Coordinates the 10 canonical label departments (A&R, Marketing, Distribution, Publicity, Legal, Royalties, Studio, Artist Relations, Sync, Operations) and the 5 label-specific skills (suno-integration, distrokid-delivery, beg-catalog-metadata, ascap-publishing, rosters-and-catalog-reconciliation) per PRD §7.",
+      "model_tier": "",
+      "profile_type": "",
+      "primary_role": "This is the main agent for all WGNR Sounds project sessions",
+      "department": "",
+      "model_preset": "",
+      "main_model": "",
+      "skills_enabled": [],
+      "path": ".a0proj/agents/wgnr-sounds-captain/agent.yaml"
     }
-  ],
-  "version": "4.0.0",
-  "count": 17
+  ]
 }

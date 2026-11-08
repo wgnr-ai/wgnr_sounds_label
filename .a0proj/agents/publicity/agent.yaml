@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: label-department
 department: Publicity / PR
 model_tier: judgment
-context: Use this agent for Earn media coverage and shape the public narrative around releases and artists. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
+context: Use this agent for Earn media coverage and shape the public narrative around releases and artists. Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
 dependencies:
   - Marketing & Promotion
   - Distribution & Digital Strategy

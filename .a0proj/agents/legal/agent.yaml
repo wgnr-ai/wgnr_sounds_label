@@ -8,7 +8,7 @@ owner: Wagner dos Santos (Principal)
 profile_type: label-department
 department: Legal & Business Affairs
 model_tier: precision
-context: Use this agent for Contracts, rights, licensing, dispute resolution. The legal backbone of the label. Documents and administers WGNR Sounds Music Publishing (ASCAP-registered). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
+context: Use this agent for Contracts, rights, licensing, dispute resolution. The legal backbone of the label. Documents and administers WGNR Sounds Music Publishing (ASCAP-registered). Operates under Wagner dos Santos (Principal) direction as part of the WGNR Sounds Record Label division of wgnr.ai. References _context.md for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule) and prds/PRD-wgnr-sounds-label.md as the canonical contract.
 dependencies:
   - A&R
   - Royalties & Finance

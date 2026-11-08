@@ -1,0 +1,98 @@
+{
+  "agents": [
+    {
+      "slug": "ar",
+      "title": "A&R (Artist & Repertoire)",
+      "description": "Taste-maker of the label — scouts, signs, and develops artists within the multi-genre / eclectic scope. Owns the canonical roster reconciliation and per-artist Suno-role declaration.",
+      "model_tier": "judgment",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Find, sign, and develop artists. The creative taste-making function of the label.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-integration",
+        "rosters-and-catalog-reconciliation"
+      ],
+      "path": ".a0proj/agents/ar/agent.yaml"
+    },
+    {
+      "slug": "marketing",
+      "title": "Marketing & Promotion",
+      "description": "Builds and executes go-to-market plans for each release. Coordinates DSP + social + paid media. Reports campaign-level ROAS and channel attribution.",
+      "model_tier": "judgment",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Build and execute the go-to-market plan for each release. Make listeners care.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [],
+      "path": ".a0proj/agents/marketing/agent.yaml"
+    },
+    {
+      "slug": "distribution",
+      "title": "Distribution & Digital Strategy",
+      "description": "Sole integrator is DistroKid (since 2023). Owns the per-artist Suno flow routing, metadata hygiene, release calendar, and DSP editorial pitching.",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Get the music onto every relevant DSP on the right date with the right metadata. The sole integration point is DistroKid (in continuous use since 2023).",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "cerebras/gpt-oss-120b",
+      "skills_enabled": [
+        "suno-integration",
+        "distrokid-delivery"
+      ],
+      "path": ".a0proj/agents/distribution/agent.yaml"
+    },
+    {
+      "slug": "publicity",
+      "title": "Publicity / PR",
+      "description": "Earns media coverage and shapes public narrative around releases and artists. Owns press releases, media relationships, interview coordination, and embargo management.",
+      "model_tier": "judgment",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Earn media coverage and shape the public narrative around releases and artists.",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [],
+      "path": ".a0proj/agents/publicity/agent.yaml"
+    },
+    {
+      "slug": "legal",
+      "title": "Legal & Business Affairs",
+      "description": "Contracts, rights, licensing, dispute resolution. Administers WGNR Sounds Music Publishing (ASCAP-registered sub-entity). Maintains awareness of Suno's commercial-use license terms.",
+      "model_tier": "precision",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Contracts, rights, licensing, dispute resolution. The legal backbone of the label. Documents and administers WGNR Sounds Music Publishing (ASCAP-registered).",
+      "model_preset": "Default Coding and Reasoning",
+      "main_model": "zai_coding/glm-5.1",
+      "skills_enabled": [
+        "suno-integration",
+        "ascap-publishing"
+      ],
+      "path": ".a0proj/agents/legal/agent.yaml"
+    },
+    {
+      "slug": "royalties",
+      "title": "Royalties & Finance",
+      "description": "Royalty accounting, statements, advances, recoupment. Future-state department (v2+ trigger: volumes grow or publishing-administration partnership activates).",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)",
+      "primary_role": "Money in, money out, money owed. Royalty accounting, statements, advances, recoupment. Future-state department — activates when volumes grow or a publishing-administration partnership is signed.",
+      "model_preset": "Fast Sub-Agent Inference",
+      "main_model": "cerebras/gpt-oss-120b",
+      "skills_enabled": [
+        "ascap-publishing"
+      ],
+      "path": ".a0proj/agents/royalties/agent.yaml"
+    },
+    {
+      "slug": "studio",
+      "title": "Studio (Recording & Engineering)",
+      "description": "Captures and finishes music for the human-recorded pipeline only (Velvut + Wágner). AI-generated releases bypass Studio and source masters directly from Suno.",
+      "model_tier": "execution",
+      "profile_type": "label-department",
+      "department_reference": "PRD §7 (WGNR Sounds Record Label v1.2)

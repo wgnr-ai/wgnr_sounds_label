@@ -1,12 +1,12 @@
 # PRD: WGNR Sounds Record Label — v3.0 (Creative Song-Production Layer)
 
-> **Scope:** This PRD defines the v3.0 build of the WGNR Sounds Record Label project. v3.0 preserves all v2.1 foundation content (10 canonical label departments, project Captain orchestrator, shared-until-dedicated brand-guide rule, roster & catalog, release lifecycle, DistroKid pipeline, ASCAP Music Publishing sub-entity) and adds the **Creative Song-Production Layer** (PRD §13): 3 new creative agents (`song-architect`, `lyricist`, `suno-prompter`) plus 1 canonical skill (`suno-prompt-compatibility-spec`). v3.0 is the v2.1.0 follow-up that closes the "song projects before going to Suno" workflow gap: Wagner can now accumulate finished creative artifacts (song blueprint + finished lyrics + verified Suno-compatible prompts) inside the wgnr_sounds_label project before exporting to suno.com. v3.0 does NOT scaffold `composer` or `music-video-producer` — those remain future work.
+> **Scope:** This PRD defines the v3.0 build of the WGNR Sounds Record Label project. v3.0 preserves all v2.1 foundation content (10 canonical label departments, project Captain orchestrator, shared-until-dedicated brand-guide rule, roster & catalog, release lifecycle, RouteNote pipeline, ASCAP Music Publishing sub-entity) and adds the **Creative Song-Production Layer** (PRD §13): 3 new creative agents (`song-architect`, `lyricist`, `suno-prompter`) plus 1 canonical skill (`suno-prompt-compatibility-spec`). v3.0 is the v2.1.0 follow-up that closes the "song projects before going to Suno" workflow gap: Wagner can now accumulate finished creative artifacts (song blueprint + finished lyrics + verified Suno-compatible prompts) inside the wgnr_sounds_label project before exporting to suno.com. v3.0 does NOT scaffold `composer` or `music-video-producer` — those remain future work.
 >
-> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/`. (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **DistroKid is the sole distributor since 2023**. (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) **v2.1**: `wgnr-sounds-captain` agent profile + `.a0proj/default_agent.json` Captain auto-selection. (10) **v3.0 NEW**: Creative Song-Production Layer (`song-architect` + `lyricist` + `suno-prompter` agents) + canonical `suno-prompt-compatibility-spec` skill. Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (verified Suno-ready prompts). Per-artist Suno role (PRD §5.4) drives prompt structure.
+> **Must-include elements:** (1) WGNR Sounds is a **division of wgnr.ai** (parent-child), NOT a peer entity. (2) The **shared-until-dedicated brand-guide rule** is the active policy: until WGNR Sounds ships its own dedicated brand guide, the **wgnr.ai brand guide** is the active source for color and typography tokens, exposed via `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE`. (3) Brand assets live at `docs/brand-assets/`. (4) The active roster (Wágner, Velvut, DJ Farra, Sobralenses) + the historical BEG catalog (1995–2002, 4 sub-imprints, 30+ albums). (5) Per-artist Suno role matrix: DJ Farra + Sobralenses = 100% AI-generated; Wágner + Velvut = Suno-assist only. (6) **RouteNote is the sole distributor since 2026-11; DistroKid was distributor 2023–2026)**. (7) **WGNR Sounds Music Publishing** is an ASCAP-registered sub-entity owned by WGNR Sounds. (8) Multi-genre / eclectic scope — A&R is taste-maker, departments are genre-agnostic. (9) **v2.1**: `wgnr-sounds-captain` agent profile + `.a0proj/default_agent.json` Captain auto-selection. (10) **v3.0 NEW**: Creative Song-Production Layer (`song-architect` + `lyricist` + `suno-prompter` agents) + canonical `suno-prompt-compatibility-spec` skill. Workflow: `song-architect` (blueprint) → `lyricist` (lyrics) → `suno-prompter` (verified Suno-ready prompts). Per-artist Suno role (PRD §5.4) drives prompt structure.
 >
 > **Must-not-compress lists:** Departments: 10 items (numbered §7.1–§7.10). Creative Production Layer: 3 agents (song-architect, lyricist, suno-prompter). Release-lifecycle phases: 7 stages. Suno role matrix: 4 artists × 4 columns (Artist / Suno role / Master source / Distribution flow). Open Questions: must be enumerated individually so each can be resolved independently. BEG sub-imprints: 4 (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks). Captain dependencies: 10 department agents + 5 skills. v1.2 §4 brand-identity subsections: 6. §13 Creative Song-Production Layer subsections: 13.1 workflow + 13.2 agents + 13.3 skill + 13.4 per-artist Suno role mapping.
 >
-> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is DistroKid named as the sole distributor with the year (2023)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/`? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)? (10) Is the v2.1 Captain (`wgnr-sounds-captain`) documented with the canonical reference path? (11) Is `.a0proj/default_agent.json` documented as the framework default-agent wiring mechanism? (12) Are the 3 v3.0 creative agents (`song-architect`, `lyricist`, `suno-prompter`) documented with slug + title + model tier + output deliverable? (13) Is the `suno-prompt-compatibility-spec` skill referenced as the canonical Suno format reference (mandatory before suno-prompter emission)? (14) Is the §13 workflow (`song-architect` → `lyricist` → `suno-prompter`) documented? (15) Is the per-artist Suno role mapping (PRD §5.4) linked from §13?
+> **Counter-prompt:** After summarizing, verify: (1) Is the division-of-wgnr.ai framing (NOT sister-entity) the only stated brand relationship? (2) Is the shared-until-dedicated brand-guide rule documented? (3) Are all 4 BEG sub-imprints named? (4) Are all 4 active artists named with their Suno role? (5) Is RouteNote named as the sole distributor with the year (2026-11)? (6) Is WGNR Sounds Music Publishing named as ASCAP-registered? (7) Is the brand-asset path `docs/brand-assets/`? (8) Is the `WGNR_SOUNDS_ACTIVE_BRAND_GUIDE` env-var referenced? (9) Are parent-brand references written as lowercase `wgnr.ai` (NOT uppercase `WGNR`)? (10) Is the v2.1 Captain (`wgnr-sounds-captain`) documented with the canonical reference path? (11) Is `.a0proj/default_agent.json` documented as the framework default-agent wiring mechanism? (12) Are the 3 v3.0 creative agents (`song-architect`, `lyricist`, `suno-prompter`) documented with slug + title + model tier + output deliverable? (13) Is the `suno-prompt-compatibility-spec` skill referenced as the canonical Suno format reference (mandatory before suno-prompter emission)? (14) Is the §13 workflow (`song-architect` → `lyricist` → `suno-prompter`) documented? (15) Is the per-artist Suno role mapping (PRD §5.4) linked from §13?
 
 **Status:** Draft (v3.0)  
 **Version:** v3.0.0  
@@ -20,7 +20,7 @@
 
 ## 1. TL;DR
 
-WGNR Sounds is a **division of wgnr.ai** — the virtual representation of a real-world independent record label owned by wgnr.ai President Wagner dos Santos (per the wgnrsounds.com tagline). The v1.2 deliverable applies Wagner's primary-source corrections (2026-08-30) on top of v1.1: (a) the **shared-until-dedicated brand-guide rule** (the wgnr.ai brand guide is the active source until WGNR Sounds ships its own dedicated guide); (b) brand-asset path refresh to `docs/brand-assets/` (Wagner dropped 4 logos on 2026-08-30); (c) casing sweep (~30 instances: `division of WGNR` → `division of wgnr.ai`, `WGNR, LLC` → `wgnr.ai, LLC`); (d) `.a0proj/project.json` instructions field rewrite. v1.2 documents the label's identity, active + historical roster, 10 canonical departments, the operating model (including the per-artist Suno integration map), the release lifecycle, the DistroKid distribution pipeline, and the ASCAP-registered WGNR Sounds Music Publishing sub-entity. The label is multi-genre / eclectic; A&R is a taste-making function, and every department is genre-agnostic. v1.2 stops at the PRD + project skeleton + brand assets scaffold level; v2 will translate each functional domain into agent profiles, skills, and plugins.
+WGNR Sounds is a **division of wgnr.ai** — the virtual representation of a real-world independent record label owned by wgnr.ai President Wagner dos Santos (per the wgnrsounds.com tagline). The v1.2 deliverable applies Wagner's primary-source corrections (2026-08-30) on top of v1.1: (a) the **shared-until-dedicated brand-guide rule** (the wgnr.ai brand guide is the active source until WGNR Sounds ships its own dedicated guide); (b) brand-asset path refresh to `docs/brand-assets/` (Wagner dropped 4 logos on 2026-08-30); (c) casing sweep (~30 instances: `division of WGNR` → `division of wgnr.ai`, `WGNR, LLC` → `wgnr.ai, LLC`); (d) `.a0proj/project.json` instructions field rewrite. v1.2 documents the label's identity, active + historical roster, 10 canonical departments, the operating model (including the per-artist Suno integration map), the release lifecycle, the RouteNote distribution pipeline, and the ASCAP-registered WGNR Sounds Music Publishing sub-entity. The label is multi-genre / eclectic; A&R is a taste-making function, and every department is genre-agnostic. v1.2 stops at the PRD + project skeleton + brand assets scaffold level; v2 will translate each functional domain into agent profiles, skills, and plugins.
 
 ## 2. Problem statement
 
@@ -50,7 +50,7 @@ WGNR Sounds operates as a real-world independent record label covering the full 
 - **G5:** Document the **division-of-wgnr.ai** brand relationship and the **shared-until-dedicated brand-guide rule** (the wgnr.ai brand guide is the active source until WGNR Sounds ships its own).
 - **G6:** Preserve multi-genre discipline — departments are genre-agnostic; A&R is the only taste-making function.
 - **G7:** Document the active roster (4 artists with per-artist Suno role) and the historical BEG back-catalog (1995–2002, 4 sub-imprints, 30+ albums).
-- **G8:** Lock the distribution pipeline as **DistroKid (sole distributor since 2023)** with per-artist Suno flow routing.
+- **G8:** Lock the distribution pipeline as **RouteNote (sole distributor since 2026-11; DistroKid was distributor 2023–2026)** with per-artist Suno flow routing.
 - **G9:** Document **WGNR Sounds Music Publishing** as the ASCAP-registered publishing sub-entity owned by WGNR Sounds.
 - **G10:** Surface open questions for the Principal to resolve before v2 work begins.
 - **G11:** Ship a working project skeleton (this directory tree + `prds/` + `docs/` + `.a0proj/` + brand assets at `docs/brand-assets/`) so v2 can begin.
@@ -60,7 +60,7 @@ WGNR Sounds operates as a real-world independent record label covering the full 
 - **NG1:** NO agent profiles. Department entries are functional domains — not yet agent.yaml definitions.
 - **NG2:** NO skills or plugins. Skill scaffolding is v2 work.
 - **NG3:** NO working simulation. No sample catalog data, no mock DSP uploads, no test release pipeline.
-- **NG4:** NO direct DSP integration code (we use DistroKid as the sole integration point; no Spotify API, no Apple Music API, etc.).
+- **NG4:** NO direct DSP integration code (we use RouteNote as the sole integration point; no Spotify API, no Apple Music API, etc.).
 - **NG5:** NO royalty accounting automation. Royalty statements and recoupment logic are v2+ work.
 - **NG6:** NO contract templates. Legal & Business Affairs department exists as a functional domain; no actual contract files ship in v1.2.
 - **NG7:** NO sync placement tooling. Catalog pitching is documented at the functional level only; Sync Licensing is aspirational.
@@ -164,10 +164,10 @@ The active roster splits between two pipelines. The per-artist Suno role determi
 
 | Artist | Suno role | Master source | Distribution flow |
 |---|---|---|---|
-| **DJ Farra** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → DistroKid → DSPs |
-| **Sobralenses** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → DistroKid → DSPs |
-| **Velvut** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → DistroKid → DSPs |
-| **Wágner** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → DistroKid → DSPs |
+| **DJ Farra** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → RouteNote → DSPs |
+| **Sobralenses** | 100% AI-generated music AND lyrics | Suno (download from Suno) | Suno → RouteNote → DSPs |
+| **Velvut** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → RouteNote → DSPs |
+| **Wágner** | Suno-assist only (song-idea assistance) | Human recording (studio) | Studio → RouteNote → DSPs |
 
 **Implications for departments:**
 
@@ -264,11 +264,11 @@ For each department below: **Function** (one-line purpose) → **Primary respons
 
 ### 7.3 Distribution & Digital Strategy
 
-- **Function:** Get the music onto every relevant DSP (Spotify, Apple Music, Tidal, Amazon, YouTube Music, etc.) on the right date with the right metadata. The sole integration point is **DistroKid**, in continuous use as the label's distributor since 2023.
+- **Function:** Get the music onto every relevant DSP (Spotify, Apple Music, Tidal, Amazon, YouTube Music, etc.) on the right date with the right metadata. The sole integration point is **RouteNote**, sole distributor since 2026-11 (DistroKid was distributor 2023–2026).
 - **Primary responsibilities:**
-  - **Sole distributor: DistroKid (since 2023)** — uploads masters, metadata, artwork, credits to DistroKid; DistroKid handles delivery to all reachable DSPs.
+  - **Sole distributor: RouteNote (since 2026-11; DistroKid was distributor 2023–2026)** — uploads masters, metadata, artwork, credits to RouteNote; RouteNote handles delivery to all reachable DSPs.
   - **Per-artist Suno flow routing (NEW in v1.1):** for DJ Farra + Sobralenses, the master source is Suno; for Velvut + Wágner, the master source is the studio. The distribution pipeline distinguishes the two source types for metadata and rights hand-off (see §5.4 matrix).
-  - **Mechanical rights:** handled via DistroKid / MLC (Mechanical Licensing Collective) registration for US compulsory mechanical licensing.
+  - **Mechanical rights:** handled via RouteNote / MLC (Mechanical Licensing Collective) registration for US compulsory mechanical licensing.
   - Release calendar — owning the master schedule of upcoming releases across all artists.
   - Metadata hygiene — ISRC / ISWC / UPC codes, songwriter splits, label copy.
   - Pre-save / pre-add / smart-link mechanics — the technical plumbing of fan conversion.
@@ -303,7 +303,7 @@ For each department below: **Function** (one-line purpose) → **Primary respons
   - Contract drafting — recording agreements, distribution agreements, producer agreements, work-for-hire, NDA, releases.
   - Rights administration — registering rights with collecting societies, maintaining the chain-of-title documentation.
   - **WGNR Sounds Music Publishing (NEW in v1.1):** administering publishing rights for the catalog on behalf of the writers through the ASCAP-registered sub-entity. Performance rights royalties flow through ASCAP; WGNR Sounds Music Publishing is the rights administrator.
-  - Licensing — mechanical (via DistroKid / MLC, see §7.3), synchronization (in coordination with Sync Licensing, see §7.9 — aspirational), neighboring rights.
+  - Licensing — mechanical (via RouteNote / MLC, see §7.3), synchronization (in coordination with Sync Licensing, see §7.9 — aspirational), neighboring rights.
   - Dispute resolution — handling claims, counter-claims, royalty disputes, infringement notices.
   - Compliance — staying current on copyright law, rights-society rules, and platform-specific licensing requirements.
   - **Suno licensing terms (NEW in v1.1):** maintaining awareness of Suno's commercial-use license terms as they apply to AI-generated masters under DJ Farra and Sobralenses.
@@ -424,9 +424,9 @@ A canonical release moves through seven stages in sequence. Each stage has a pri
 
 1. **A&R signs** — A&R identifies and signs an artist. Legal finalizes the contract (including the Suno-role clause per §7.1). Artist Relations picks up the relationship.
 2. **Studio records** — Studio (Recording & Engineering) executes the recording project per the A&R brief. **Active only for human-recorded artists (Velvut, Wágner).** AI-generated releases (DJ Farra, Sobralenses) skip Studio; the master is downloaded directly from Suno per §5.4. Final masters, metadata, and artwork are produced (or downloaded).
-3. **Marketing plans** — Marketing & Promotion builds the release campaign in coordination with Publicity. Distribution confirms the release date and pre-save mechanics via DistroKid.
-4. **Distribution delivers** — Distribution & Digital Strategy uploads masters to **DistroKid** (sole distributor since 2023) on the agreed date. DistroKid handles delivery to all reachable DSPs.
-5. **Royalties accrues** — Royalties & Finance begins accruing streaming / sales data from the DSPs (via DistroKid reporting). Future-state — see §7.7.1 for current-state rationale.
+3. **Marketing plans** — Marketing & Promotion builds the release campaign in coordination with Publicity. Distribution confirms the release date and pre-save mechanics via RouteNote.
+4. **Distribution delivers** — Distribution & Digital Strategy uploads masters to **RouteNote** (sole distributor since 2026-11; DistroKid was distributor 2023–2026) on the agreed date. RouteNote handles delivery to all reachable DSPs.
+5. **Royalties accrues** — Royalties & Finance begins accruing streaming / sales data from the DSPs (via RouteNote reporting). Future-state — see §7.7.1 for current-state rationale.
 6. **Publicity amplifies** — Publicity / PR coordinates press coverage, interviews, and editorial pitching around the launch and post-launch window.
 7. **Artist Relations sustains** — Artist Relations handles the ongoing artist relationship through the post-release period, including tour coordination, check-ins, and statement communication.
 
@@ -439,7 +439,7 @@ Marketing, Publicity, and Distribution must coordinate the launch window as a si
 1. **Music Publishing Administration as 11th department** — Should WGNR Sounds Music Publishing (the ASCAP-registered sub-entity, see §4.5 + §7.5) be promoted to its own department, or remain documented under Legal & Business Affairs? v1.2 default: documented under Legal & Business Affairs (one canonical sub-entity reference rather than two parallel departments). **Rationale for keeping under Legal & Business Affairs:** the publishing sub-entity has no functional operations distinct from Legal & Business Affairs in v1.2 scope; it exists as a legal-entity reference for rights administration. If a v2 publishing-administration partnership activates (per §7.9), this may need to be re-evaluated.
 2. **Roster website update ownership** — Should A&R own the website roster page rebuild, or Marketing? (Likely Marketing for the page itself; A&R for the canonical roster source-of-truth.)
 3. **Suno profile ownership** — Should Marketing maintain the Suno profile alongside DSP profiles, or treat Suno as a separate channel owned by Distribution? (Suno = source of masters for AI-generated releases per §5.4, so Distribution may be the natural owner.)
-4. **BEG catalog treatment on DSPs** — Are the historical BEG releases (30+ albums across 4 sub-imprints, 1995–2002) currently on DSPs via DistroKid, or only on original physical/digital format from 1995–2002? Affects Sync Licensing catalog scope (§7.9).
+4. **BEG catalog treatment on DSPs** — Are the historical BEG releases (30+ albums across 4 sub-imprints, 1995–2002) currently on DSPs via DistroKid (historical) / RouteNote (current), or only on original physical/digital format from 1995–2002? Affects Sync Licensing catalog scope (§7.9).
 5. **Real-world roster size at v2 kickoff** — How many artists are signed at v2 kickoff? Drives agent-profile concurrency assumptions.
 6. **Sync priorities** — If sync activates (per §7.9), which verticals matter most: film / TV / advertising / video games / all? Drives Sync Licensing agent scoping.
 7. **Royalty accounting cadence** — When Royalties & Finance activates (v2+), what cadence: quarterly, semi-annual, annual?
@@ -458,7 +458,7 @@ v1.2 ships only the project skeleton, the corrected PRD, and the brand assets sc
 - **Skills and skill scaffolding** (`.a0proj/skills/` is intentionally absent).
 - **Plugin configurations** (`.a0proj/plugins/` is intentionally absent).
 - **Working simulation** — no sample catalog data, no mock releases, no test DSP uploads.
-- **Direct DSP integration code** — DistroKid is the sole integration point; no Spotify/Apple/Tidal API code.
+- **Direct DSP integration code** — RouteNote is the sole integration point; no Spotify/Apple/Tidal API code.
 - **Royalty accounting automation** — no calculation engine ships.
 - **Contract templates** — Legal & Business Affairs is a functional domain only.
 - **Sync placement tooling** — Sync Licensing is aspirational; no pitch-deck templates or outreach sequences ship.
@@ -516,7 +516,7 @@ The Captain orchestrates the 10 canonical label departments per §7 — `ar`, `m
 
 ### 12.5 Why a Captain
 
-Every project in this framework should have a Captain orchestrator that owns project-specific workflow. Without a Captain, new chats default to the global profile (`wgnr-ai-ops`) and lose label-specific context (multi-genre discipline, DistroKid pipeline, Suno role matrix, ASCAP Music Publishing). The Captain restores project-aware defaults without per-chat manual selection.
+Every project in this framework should have a Captain orchestrator that owns project-specific workflow. Without a Captain, new chats default to the global profile (`wgnr-ai-ops`) and lose label-specific context (multi-genre discipline, RouteNote pipeline, Suno role matrix, ASCAP Music Publishing). The Captain restores project-aware defaults without per-chat manual selection.
 
 ---
 
@@ -536,14 +536,14 @@ song-architect  →  lyricist  →  suno-prompter
                               ↓
                        suno.com (paste)
                               ↓
-                       DistroKid → DSPs (per §5.4 pipeline)
+                       RouteNote → DSPs (per §5.4 pipeline)
 ```
 
 1. **song-architect** produces the song blueprint (concept, structure, arrangement, genre/mood/tempo, Suno role pre-check).
 2. **lyricist** produces finished song lyrics (metadata header + section-labeled body).
 3. **suno-prompter** consumes the blueprint + lyrics, runs the `suno-prompt-compatibility-spec` verification checklist, and emits a Suno-ready prompt set.
 4. The user assembles the 3 artifacts and pastes the Suno prompt set into suno.com.
-5. The output track (or ideation test) flows to DistroKid → DSPs per the per-artist Suno role (PRD §5.4).
+5. The output track (or ideation test) flows to RouteNote → DSPs per the per-artist Suno role (PRD §5.4).
 
 ### 13.2 Agents
 
@@ -576,7 +576,7 @@ The Suno role pre-check is **mandatory** in every blueprint (§13.1 step 1). It 
 
 ### 13.5 Use case
 
-Wagner starts a song project in wgnr_sounds_label before going to Suno. Inside the project, the 3 creative agents produce finished artifacts (song blueprint + finished lyrics + verified Suno-ready prompts) as separate deliverables. Wagner assembles them, pastes the Suno prompt set into suno.com, and proceeds to the release pipeline (DistroKid → DSPs). The "verified Suno-compatible" claim is auditable via the `suno-prompt-compatibility-spec` skill checklist.
+Wagner starts a song project in wgnr_sounds_label before going to Suno. Inside the project, the 3 creative agents produce finished artifacts (song blueprint + finished lyrics + verified Suno-ready prompts) as separate deliverables. Wagner assembles them, pastes the Suno prompt set into suno.com, and proceeds to the release pipeline (RouteNote → DSPs). The "verified Suno-compatible" claim is auditable via the `suno-prompt-compatibility-spec` skill checklist.
 
 - [x] AI-Readable Block present (Scope, Must-include, Must-not-compress, Counter-prompt), updated for v1.2 corrections (shared-until-dedicated rule + path refresh).
 - [x] TL;DR paragraph ≤ 200 words.
@@ -655,7 +655,7 @@ Wagner starts a song project in wgnr_sounds_label before going to Suno. Inside t
 | Brand assets location: sysop project → local project | Correction | Brand assets scaffolded at `/a0/usr/projects/wgnr_sounds_label/docs/brand-assets/` (originally at `.a0proj/knowledge/client-assets/wgnr-sounds-assets/` per v1.1; refreshed in v1.2). Subfolders `wgnr-sounds-logos/` (4 PNGs dropped by Wagner on 2026-08-30) and `wgnr-sounds-brand-guide.pdf.gitkeep` placeholder + handoff README. |
 | WGNR Sounds Music Publishing sub-entity added | New section | §4.5 + §7.5 — ASCAP-registered, owned by WGNR Sounds, distinct from the recording label, administers publishing rights. Documented under Legal & Business Affairs (NOT a separate department). |
 | Department count: 11 → 10 | Reconciliation | v1's `prds/AGENTS.md` and root `AGENTS.md` references to "11-department catalog" corrected to 10. The original 10-vs-11 ambiguity in v1 was a miscount of the user-supplied list; v1.1 confirmed 10 departments. (v1.2 preserves this correction.) |
-| DistroKid as sole distributor | Update | §7.3 + §8.1 — generic DSP language replaced with **DistroKid (sole distributor since 2023)**. Mechanical rights via DistroKid / MLC. NG4 updated from "NO distribution partner integrations" to "NO direct DSP integration code". |
+| DistroKid as sole distributor | Update | §7.3 + §8.1 — generic DSP language replaced with **RouteNote (sole distributor since 2026-11; DistroKid was distributor 2023–2026)**. Mechanical rights via RouteNote / MLC. NG4 updated from "NO distribution partner integrations" to "NO direct DSP integration code". |
 | Per-artist Suno role matrix | New section | §5.4 + §7.1 + §7.3 + §7.5 + §7.6 + §8.1 — DJ Farra + Sobralenses = 100% AI-generated (Suno = source of masters); Wágner + Velvut = Suno-assist only (human-recorded pipeline). |
 | Active roster | New section | §6.1 — 4 active artists: Wágner, Velvut, DJ Farra, Sobralenses. |
 | BEG historical catalog | New section | §6.2 — Beloved Entertainment Group 1995–2002, NYC-based, 30+ albums, 4 sub-imprints (Beloved Recordings, Yum Recordings, Updego Entertainment, Beloved Soundtracks), breakthrough "Ska: The Third Wave" compilation, strategic partnerships (Dinemec Records, Crane Mountain Records), historical independent artists (Buzz Prophets, Nerve), legal status as fictitious name under wgnr.ai, LLC. (v1.2 corrects the casing from WGNR, LLC.) |

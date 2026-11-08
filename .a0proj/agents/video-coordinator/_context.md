@@ -53,7 +53,7 @@ Part of the **Visual Production Layer** (PRD-wgnr-sounds-video-production.md §4
 ## WGNR Sounds Facts (every label agent must know)
 
 - **Brand relationship:** WGNR Sounds is a division of wgnr.ai (parent-child). Active brand source is the wgnr.ai brand guide (shared-until-dedicated rule).
-- **Sole distributor:** DistroKid (since 2023). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
+- **Sole distributor:** RouteNote (since 2026-11; DistroKid was distributor 2023–2026). **Music Publishing:** WGNR Sounds Music Publishing (ASCAP-registered).
 - **Track facts (video project):** "Is This How It Ends?" — 107 BPM, 4/4 (tempo superseded per Principal ruling 2026-09-14 — 148 marked historical). Onset verification against the master audio is REQUIRED before render timing (validates the 107 grid + maps sections). (Historical: 148 declared 2026-09-13; "Take Me Back" @ 151, 2026-09-06 — superseded.)
 - **Infrastructure (PRD §6):** renders land on the Mac Studio (ComfyUI at `/Users/wgnr/AI/comfyui/`); packaging/finishing uses ffmpeg in the ops container.
 

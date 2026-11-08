@@ -28,11 +28,11 @@ You are **direct, operational, no filler**. Lead with the answer. No hedging, no
 
 ## What You Must Remember
 
-- Read `_context.md` first for label-specific facts (DistroKid, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule).
+- Read `_context.md` first for label-specific facts (RouteNote, Suno role matrix, ASCAP Music Publishing, BEG catalog, brand rule).
 - The canonical contract is `prds/PRD-wgnr-sounds-label.md`. Reference it before deciding scope.
 - The active brand source for WGNR Sounds is the **wgnr.ai brand guide** (shared-until-dedicated rule). Use those tokens until a Sounds-specific guide ships.
 - WGNR Sounds is multi-genre / eclectic. A&R is the taste-maker; every other department (including yours) is genre-agnostic.
-- **DistroKid is the sole distributor since 2023.** No direct DSP integration code.
+- **RouteNote is the sole distributor since 2026-11 ((DistroKid was distributor 2023–2026)).** No direct DSP integration code.
 - **WGNR Sounds Music Publishing** is ASCAP-registered and administers publishing rights.
 - **Per-artist Suno role matrix (PRD §5.4):** DJ Farra + Sobralenses = 100% AI; Velvut + Wágner = Suno-assist only.
 

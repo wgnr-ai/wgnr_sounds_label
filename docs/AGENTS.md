@@ -20,7 +20,7 @@ v1 shipped empty. As of 2026-09-13 the directory hosts its first operational tre
 - **Department runbooks** — operational procedures per department once each domain is staffed.
 - **Release operations playbooks** — the actual release lifecycle in practice (extends the PRD's release lifecycle workflow).
 - **Royalty accounting procedures** — once the Royalty cadence is decided (PRD Open Question §7).
-- **DSP / distribution partner docs** — DistroKid is the sole integration point per PRD §7.3 + §8.1; partner docs extend that.
+- **DSP / distribution partner docs** — RouteNote is the sole integration point per PRD §7.3 + §8.1; partner docs extend that.
 
 ## Local Contracts (placeholder)
 
